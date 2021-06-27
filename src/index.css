@@ -28,27 +28,6 @@ h6 {
   margin-bottom: 0 !important;
 }
 
-
-
-.app-flex-row {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  margin: 0;
-}
-
-.app-flex-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin: 0;
-}
-
-.cursor-pointer-sort {
-  cursor: pointer;
-}
-
-
 /* width */
 ::-webkit-scrollbar {
   width: 5px !important;

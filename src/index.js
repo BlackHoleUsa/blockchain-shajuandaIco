@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './global.css';
-import Potluck from './App';
+import Shajuanda from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { BrowserRouter as Router } from "react-router-dom";
@@ -13,7 +13,7 @@ import './custom.scss';
 ReactDOM.render(
   <React.StrictMode>
       <Router>
-        <Potluck />
+        <Shajuanda />
       </Router>
   </React.StrictMode>,
   document.getElementById('root')

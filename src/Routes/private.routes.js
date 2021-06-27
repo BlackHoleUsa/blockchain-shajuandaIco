@@ -12,7 +12,7 @@ const PrivateRoute = ({ component: Component, auth, ...rest }) => {
         return (auth?.loginAuth || localStorage.getItem("isLogin")) ? (
           <Component {...props} />
         ) : (
-            <Redirect to={{ pathname: `/${Routes.login}`, state: props.location }} />
+            <Redirect to={{ pathname: `/${Routes.main}`, state: props.location }} />
           );
       }}
     />

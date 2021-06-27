@@ -8,7 +8,7 @@ const PublicRoute = ({ component: Component, restricted, ...rest }) => {
       {...rest}
       render={(props) => {
         return (localStorage.getItem('isLogin') && restricted) ? (
-            <Redirect exact to={`/${Routes.reports}`} />
+            <Redirect exact to={`/${Routes.dashboard}`} />
           ) : (
               <Component {...props} />
             )

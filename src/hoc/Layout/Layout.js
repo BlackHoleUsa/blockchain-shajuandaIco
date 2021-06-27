@@ -1,5 +1,4 @@
 import React from "react";
-import Sidebar from "../../components/Sidebar/Sidebar";
 import './Layout.css';
 
 class MainLayout extends React.Component {
@@ -19,7 +18,7 @@ class MainLayout extends React.Component {
             return (
                 <div className={`w-100 app-flex-row align-items-start justify-content-start master-layout-container`}>
 
-                    <Sidebar />
+                     
                     
                     <div className="app-flex-column p-0 w-100 h-100">
                         
