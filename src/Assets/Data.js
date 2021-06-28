@@ -1,5 +1,4 @@
 import { Routes } from "../Routes/Routes";
-
 import { BsGraphUp } from 'react-icons/bs';
 
 export const sidebarContent = [
