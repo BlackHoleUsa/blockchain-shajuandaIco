@@ -12,10 +12,10 @@ const CustomModal = (props) => {
     return(
 
         <Modal show={show} onHide={handleClose} centered 
-        backdrop="static" focus={false}>
+        backdrop="static" autoFocus={false}>
             
-            <div className="px-0 py-4 bg-secondary rounded position-relative"
-            style={{ margin: '2px' }}>
+            <div className="px-0 py-4 bg-secondary rounded position-relative w-100"
+            style={{ margin: '0px', border: '3px solid var(--primary)', height: '33vh', outline: 'none' }}>
     
                 <FaTimes className="position-absolute text-white cursor-pointer-sort" 
                     style={{ right: '10px', top: '10px' }} onClick={handleClose} />

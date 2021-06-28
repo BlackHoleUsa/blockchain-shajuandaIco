@@ -25,7 +25,10 @@ const Dashboard = () => {
             <div className="w-100 h-100 bg-primary app-flex-column" style={{ padding: '50px 50px 10px 50px' }}>
 
                 <span className="dashboard-heading-large">Dashboard</span>
-                <span className="dashboard-heading-small">Select below assets to check token details.</span>
+                <span className="dashboard-heading-small mb-2">Select below assets to check token details.</span>
+
+                <div className="w-75" style={{ height: '1px', background: 'whitesmoke' }}>
+                </div>
 
                 <div className="mx-0 mt-5 w-100 p-0 text-white" style={{ height: '80%', overflowY: 'auto' }}>
 
