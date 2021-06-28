@@ -16,16 +16,8 @@ class MainLayout extends React.Component {
     
         if (isLogin || localStorage.getItem('isLogin')) {
             return (
-                <div className={`w-100 app-flex-row align-items-start justify-content-start master-layout-container`}>
-
-                     
-                    
-                    <div className="app-flex-column p-0 w-100 h-100">
-                        
-                        { children }
-
-                    </div>
-
+                <div className="w-100 app-flex-column">
+                    { children }
                 </div>
             )
         }

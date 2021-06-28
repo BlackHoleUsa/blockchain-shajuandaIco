@@ -1,7 +1,6 @@
 import React from 'react';
-import './Dashboard.css';
 
-const Dashboard = () => {
+const Sidebar = () => {
 
     return(
 
@@ -15,4 +14,4 @@ const Dashboard = () => {
 
 }
 
-export default Dashboard;
+export default Sidebar;
