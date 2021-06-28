@@ -1,0 +1,71 @@
+.padding-topbar{
+    padding: 25px 120px 5px 120px !important;
+    transition: all .4s ease-in-out;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .padding-topbar{
+        padding: 25px 15px 5px 30px !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .padding-topbar{
+        padding: 20px 20px 5px 20px !important;
+    }
+    .navbar-nav{
+        margin-top: 20px;
+    }
+    .nav-item{
+        width: 100% !important;
+    }
+}
+
+.navbar-light .navbar-toggler{
+    color: var(--white) !important;
+    border-color: var(--white) !important;
+}
+
+.nav-links{
+    width: 100px;
+    height: 42px;
+    border-radius: 50px;
+    font-size: 15px;
+    margin-top: 2px;
+    transition: all .3s ease-in-out;
+}
+
+.nav-links:nth-child(7){
+    margin-right: 20px;
+}
+
+.connect-wallet{
+    width: 150px;
+    height: 49px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.gradient-apply{
+    background: transparent linear-gradient(269deg, #F98A07 0%, #F98A07 14%, #F3B72C 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.inactive-link{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--white);
+}
+
+.inactive-link:hover{
+    color: var(--white) !important;
+    text-decoration: none !important;
+}

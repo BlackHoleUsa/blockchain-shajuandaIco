@@ -1,0 +1,26 @@
+.buy-coin-btn{
+    width: 143px;
+    height: 51px;
+    background: transparent linear-gradient(269deg, #F98A07 0%, #F98A07 14%, #F3B72C 100%) 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+    opacity: 1;
+    border: none !important;
+    text-transform: uppercase;
+    color: var(--white);
+    margin: 0px auto;
+}
+
+.buy-coin-filed{
+    width: 228px;
+    height: 41px;
+    border: 2px solid #141218;
+    border-radius: 5px;
+    opacity: 1;
+    background: transparent !important;
+    color: var(--white);
+    padding: 0px 12px;
+}
+
+.buy-coin-filed::placeholder{
+    color: gray;
+}

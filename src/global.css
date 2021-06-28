@@ -1,4 +1,6 @@
-
+.font-30px{
+  font-size: 30px !important;
+}
 
 .app-flex-row {
     display: flex;

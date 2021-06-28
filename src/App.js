@@ -8,6 +8,7 @@ import MainLayout from "./hoc/Layout/Layout";
 
 import Dashboard from './screens/Dashboard/Dashboard';
 import Main from './screens/Main/Main';
+import Connect from "./screens/Connect/Connect";
 
 const Shajuanda = (props) => {
 
@@ -23,6 +24,7 @@ const Shajuanda = (props) => {
         
         <PublicRoute exact={true} path={`/${Routes.main}`} component={Main} restricted={true} />
         <PublicRoute exact={true} path={`/${Routes.dashboard}`} component={Dashboard} restricted={true} />
+        <PublicRoute exact={true} path={`/${Routes.connect}`} component={Connect} restricted={true} />
 
       </MainLayout>
     </Switch>
