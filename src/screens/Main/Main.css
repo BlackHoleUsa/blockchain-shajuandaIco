@@ -3,7 +3,12 @@
     transition: all .4s ease-in-out;    
 }
 
-
+.about-section-container{
+    background: url('../../Assets/images/bg-shape-crop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -90px;
+}
 
 
 
@@ -12,10 +17,16 @@
     .main-container{
         padding: 150px 15px 5px 30px !important;
     }
+    .about-section-container{
+        margin-top: -40px;   
+    }
 }
 
 @media screen and (max-width: 991px) {
     .main-container{
         padding: 150px 20px 5px 20px !important;
+    }
+    .about-section-container{
+        margin-top: 0px;   
     }
 }
