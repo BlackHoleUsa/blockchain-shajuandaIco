@@ -1,7 +1,10 @@
 export const Images = {
     logo: require('./images/logo.png').default,
     avatar: require('./images/avatar.png').default,
+    
     bgShape: require('./images/bg-shape.png').default,
+    bgShapeGrey: require('./images/bg-shape-grey.png').default,
+
     bgShapeCrop: require('./images/bg-shape-crop.png').default,
     shapeLogo: require('./images/shape-logo.png').default,
     bgHeader: require('./images/bg-header.png').default,
@@ -13,5 +16,20 @@ export const Images = {
     jig: require('./images/yellow-jigsaw.png').default,
     line: require('./images/yellow-line.png').default,
     mind: require('./images/yellow-mind.png').default,
-    profit: require('./images/yellow-profits.png').default
+    profit: require('./images/yellow-profits.png').default,
+
+    ctn: require('./images/ctn.png').default,
+    circleSide: require('./images/circle-side.png').default,
+
+    // images
+    shajuanda: require('./images/shajuanda-pic.png').default,
+
+    teamMembers: [
+        require('./images/team-mem1.png').default,
+        require('./images/team-mem2.png').default,
+        require('./images/team-mem3.png').default,
+        require('./images/team-mem4.png').default,
+    ],
+
+    logoLarge: require('./images/SARA_DIGITAL.png').default
 }

@@ -8,7 +8,7 @@ const AboutSection = (props) => {
 
     return(
 
-        <div className="w-100 app-flex-column pt-5 pb-4">
+        <div className="w-100 app-flex-column pb-4">
 
             <Row className="mx-0 mt-5 p-0">
 

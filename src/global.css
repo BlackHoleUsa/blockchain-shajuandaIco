@@ -1,3 +1,7 @@
+.font-36px{
+  font-size: 36px !important;
+}
+
 .font-30px{
   font-size: 30px !important;
 }
@@ -12,6 +16,10 @@
 
 .font-16px{
   font-size: 16px !important;
+}
+
+.font-14px{
+  font-size: 14px !important;
 }
 
 .app-flex-row {

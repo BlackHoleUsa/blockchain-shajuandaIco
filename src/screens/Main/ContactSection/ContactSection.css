@@ -1,0 +1,36 @@
+.contact-section{}
+
+.contact-section .info{
+    width: 65%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-section .info .info-field{
+    width: 100%;
+    background: transparent !important;
+    border: 2px solid var(--black);
+    border-radius: 3px;
+    color: var(--white);
+    padding: 12px 18px;
+    margin-bottom: 20px;
+}
+
+.contact-section .info textarea{
+    resize: none;
+    height: 240px;
+}
+
+.contact-section .info .info-field::placeholder{
+    color: var(--white);
+}
+
+@media screen and (max-width: 767px){
+    .contact-section .info{
+        width: 100%;
+    }
+}
