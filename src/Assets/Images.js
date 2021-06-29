@@ -5,6 +5,7 @@ export const Images = {
     bgShapeCrop: require('./images/bg-shape-crop.png').default,
     shapeLogo: require('./images/shape-logo.png').default,
     bgHeader: require('./images/bg-header.png').default,
+    aboutImage: require('./images/about-img.png').default,
 
     // features icons
     bulb: require('./images/yellow-bulb.png').default,

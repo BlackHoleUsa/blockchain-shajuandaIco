@@ -2,6 +2,18 @@
   font-size: 30px !important;
 }
 
+.font-28px{
+  font-size: 28px !important;
+}
+
+.font-20px{
+  font-size: 20px !important;
+}
+
+.font-16px{
+  font-size: 16px !important;
+}
+
 .app-flex-row {
     display: flex;
     flex-direction: row;

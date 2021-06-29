@@ -4,6 +4,7 @@ import Topbar from '../../components/Topbar/Topbar';
 import { Images } from '../../Assets/Images';
 import HeaderSection from './HeaderSection/HeaderSection';
 import AboutSection from './AboutSection/AboutSection';
+import FeatureSection from './Features/Features';
 
 const Main = () => {
 
@@ -11,7 +12,7 @@ const Main = () => {
 
         <div className="app-flex-column w-100 bg-secondary position-relative">
             
-            <img alt="" src={Images.bgHeader} className="position-absolute w-50 h-100"
+            <img alt="" src={Images.bgHeader} className="position-absolute w-50 h-75"
             style={{ left: '-25%', top: '-20%', zIndex: 10 }} />
             
             {/* <img alt="" src={Images.bgHeader} className="position-absolute w-50 h-100"
@@ -28,6 +29,7 @@ const Main = () => {
                 <div className="about-section-container">
                     <div className="main-container">
                         <AboutSection />
+                        <FeatureSection />
                     </div>
                 </div>
 

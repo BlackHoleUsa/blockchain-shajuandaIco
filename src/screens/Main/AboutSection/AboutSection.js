@@ -5,59 +5,28 @@ import BorderBox from '../../../components/BorderBox/BorderBox';
 import { Images } from '../../../Assets/Images';
 
 const AboutSection = (props) => {
-    
-    const data = [
-        { time: 12, value: 'Month' },
-        { time: 22, value: 'Day' },
-        { time: 32, value: 'Minute' },
-        { time: 42, value: 'Seconds' }
-    ];
 
     return(
 
-        <div className="w-100 app-flex-column">
+        <div className="w-100 app-flex-column pt-5 pb-4">
 
-            <Row className="m-0 p-0">
+            <Row className="mx-0 mt-5 p-0">
 
                 <Col xs={12} sm={12} md={6} lg={6} xl={6} className="m-0 p-0">
-
-                    <div className="app-flex-column header-left-section pr-2 pt-4">
-
-                        <h6>With every Sunrise, invest wise with Cryptocurrency.</h6> <br />
-                        <p>Our token, SA RA, will give investors the opportunity to acquire and accumulate wealth through digital finance.</p>
-                        <br />
-                        <button className="gradient-apply border-0">
-                            Get Started
-                        </button>
-                        <br />
-                        <br />
-                    </div>
-
+                    <img alt="" width="100%" src={Images.aboutImage} />
                 </Col>
 
                 <Col xs={12} sm={12} md={6} lg={6} xl={6} className="m-0 p-0">
-                    <div className="h-100 w-100 app-flex-column justify-content-center align-items-center text-center header-right-section">
-                        <BorderBox className="border-box">
-                            <h6 className="pt-3 pb-2">ICO Coin Start</h6>
-                            <span>Discount 70% From The Final Price</span>
-                            <div className="w-100 app-flex-row justify-content-between align-items-center px-4 flex-wrap" style={{ height: '190px' }}>
-
-                                {
-                                    data?.map((time, i) => (
-                                        <React.Fragment key={i}>
-                                            <div className="app-flex-column">
-                                                <div className="time-box">
-                                                    {time.time}
-                                                </div>
-                                                <div className="text-center py-3" style={{ opacity: .35 }}>
-                                                    {time.value}
-                                                </div>
-                                            </div>                                        
-                                        </React.Fragment>
-                                    ))
-                                }
-
-                            </div>
+                    <div className="h-100 w-100 app-flex-column justify-content-center align-items-center 
+                        text-left about-right-section p-0">
+                        <BorderBox className="border-box-about" adjust={true}>
+                            <h6 className="pb-3">About Block Chain Expert Solution</h6>
+                            <span className="w-100 text-justify">
+                            Our company is willing to give all people in the universe to have a chance to access financial assistance that will enable them to acquire wealth. Through the rich blockchaim technology and cryptocurrency, our investors will have chances of accessing digital finances which will help them to invest and build an enabling economy to all people. We are committed to ensure that individuals have gained their financial freedom which is not provided by the traditional financial systems rather, through the current digital financing.
+                            </span>
+                            <button className="gradient-apply border-0 connect-wallet text-white mt-3" style={{ width: '190px' }}>
+                                Know About Ourself
+                            </button>
                         </BorderBox>
                     </div>
                 </Col>
