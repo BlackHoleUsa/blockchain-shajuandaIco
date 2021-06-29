@@ -11,5 +11,5 @@ export const Images = {
     jig: require('./images/yellow-jigsaw.png').default,
     line: require('./images/yellow-line.png').default,
     mind: require('./images/yellow-mind.png').default,
-    profit: require('./images/yellow-profit.png').default
+    profit: require('./images/yellow-profits.png').default
 }

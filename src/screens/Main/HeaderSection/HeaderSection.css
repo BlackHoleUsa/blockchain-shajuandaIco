@@ -1,0 +1,34 @@
+.header-left-section h6{
+    letter-spacing: 1.55px;
+    font-size: 62px;
+}
+
+.header-left-section p{
+    letter-spacing: 0.45px;
+    font-size: 18px;
+}
+
+.header-left-section button{
+    width: 120px;
+    height: 45px;
+    color: var(--white);
+    border-radius: 6px;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .header-left-section h6{
+        font-size: 45px;
+    }
+    .header-left-section p{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .header-left-section h6{
+        font-size: 30px;
+    }
+    .header-left-section p{
+        font-size: 14px;
+    }
+}

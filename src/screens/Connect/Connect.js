@@ -22,7 +22,7 @@ const Connect = (props) => {
 
     return(
 
-        <div className="app-flex-column w-100 h-100 bg-primary position-relative">
+        <div className="app-flex-column w-100 h-100 bg-secondary position-relative">
             <img alt="" src={Images.bgHeader} className="position-absolute w-50 h-100"
             style={{ left: '-35%', top: '-20%' }} />
             <img alt="" src={Images.bgHeader} className="position-absolute w-50 h-100"
