@@ -12,11 +12,12 @@
 
 .header-bg-img{
     position: absolute;
-    left: -25%;
-    top: -20%;
+    left: -18%;
+    top: -18%;
     z-index: 10;
     width: 65%;
-    height: 50%;
+    height: 35%;
+    transform: rotate(22deg);
 }
 
 .token-section-container{
@@ -42,7 +43,6 @@
         /* background-size: contai; */
     }
     .header-bg-img{
-        width: 60% !important;
-        height: 45% !important;
+        display: none;
     }
 }

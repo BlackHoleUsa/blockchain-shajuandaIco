@@ -32,3 +32,16 @@ export const teamMembers = [
     { id: 3, name: 'Andrew Markony', role: 'Head of Marketing', image: Images.teamMembers[2] },
     { id: 4, name: 'Yolonda Davis Kennedy', role: 'Prosci CM', image: Images.teamMembers[3] }
 ];
+
+export const questions = [
+    { question: '1. Why You Like to Invest In Crypto ?', ans: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believabledon't look even slightly believable" },
+    { question: '1. Why You Like Cryptocurrency Business ?', ans: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believabledon't look even slightly believable" },
+    { question: '1. How Can You Start a Business With Us ?', ans: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believabledon't look even slightly believable" },
+    { question: '1. Why You Like to Inves In Crypto ?', ans: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believabledon't look even slightly believable" }
+];
+
+export const footerLinks = [
+    "Advertiser Agreement", "Acceptable Use Policy", 
+    "Privacy Policy", "Technology Privacy", "Developer Agreement", "Home", "About Us", 
+    "Roadmap", "Blog", "Partner"
+];

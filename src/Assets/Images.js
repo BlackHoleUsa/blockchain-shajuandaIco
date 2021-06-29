@@ -20,6 +20,7 @@ export const Images = {
 
     ctn: require('./images/ctn.png').default,
     circleSide: require('./images/circle-side.png').default,
+    circleSideHalf: require('./images/circle-side-half.png').default,
 
     // images
     shajuanda: require('./images/shajuanda-pic.png').default,
@@ -31,5 +32,6 @@ export const Images = {
         require('./images/team-mem4.png').default,
     ],
 
-    logoLarge: require('./images/SARA_DIGITAL.png').default
+    logoLarge: require('./images/SARA_DIGITAL.png').default,
+    teamHeadings: require('./images/team-headings.png').default,
 }

@@ -10,6 +10,10 @@
   font-size: 28px !important;
 }
 
+.font-23px{
+  font-size: 23px !important;
+}
+
 .font-20px{
   font-size: 20px !important;
 }
@@ -48,4 +52,34 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .font-36px{
+    font-size: 30px !important;
+  }
+  
+  .font-30px{
+    font-size: 25px !important;
+  }
+  
+  .font-28px{
+    font-size: 22px !important;
+  }
+  
+  .font-23px{
+    font-size: 19px !important;
+  }
+  
+  .font-20px{
+    font-size: 17px !important;
+  }
+  
+  .font-16px{
+    font-size: 15px !important;
+  }
+  
+  .font-14px{
+    font-size: 13px !important;
+  }
 }

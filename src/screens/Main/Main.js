@@ -8,6 +8,7 @@ import FeatureSection from './Features/Features';
 import TokenSaleSection from './TokenSale/TokenSale';
 import RoadMapSection from './RoadMap/RoadMap';
 import ContactSection from './ContactSection/ContactSection';
+import Footer from './Footer/Footer';
 
 const Main = () => {
 
@@ -15,7 +16,7 @@ const Main = () => {
 
         <div className="app-flex-column w-100 bg-secondary position-relative">
             
-            {/* <img alt="" src={Images.bgHeader} className="header-bg-img" /> */}
+            <img alt="" src={Images.bgHeader} className="header-bg-img" />
             
             <Topbar />
 
@@ -47,6 +48,10 @@ const Main = () => {
 
                 <div className="main-container pt-0 bg-lightPrimary">
                     <ContactSection />
+                </div>
+
+                <div className="main-container pt-0 bg-primary">
+                    <Footer />
                 </div>
 
             </div>
