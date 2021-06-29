@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Footer.css';
 import { Row, Col } from 'react-bootstrap'; 
 import { Images } from '../../../Assets/Images';
@@ -6,6 +6,8 @@ import { footerLinks } from '../../../Assets/Data';
 import SocialMedia from './SocialMedia';
 
 const Footer = (props) => {
+
+    const [email, setEmail] = useState('')
 
     return(
 
@@ -53,6 +55,13 @@ const Footer = (props) => {
                         <span className="font-16px mb-2">
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
                         </span>
+                        
+                        <div className="footer-subscribe">
+                            <input placeholder="Your Email..." value={email} onChange={(e) => setEmail(e.target.value)} className="footer-subscribe-input" />
+                            <button className="gradient-apply border-0 footer-subscribe-btn">
+                                Submit
+                            </button>
+                        </div>    
 
                     </div>
                 </Col>
