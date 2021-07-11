@@ -12,14 +12,18 @@ const Topbar = (props) => {
     
     const [ scroll, setScroll ] = useState(false);
 
+    const [ showMenu, setShowMenu ] = useState(false);
+
+    const { currentState, clickLink } = props;
+
     const data = [
-        { id: 1, value: 'Home' },
-        { id: 2, value: 'About' },
-        { id: 3, value: 'Team' },
-        { id: 4, value: 'Token' },
-        { id: 5, value: 'Roadmap' },
-        { id: 6, value: 'FAQs' },
-        { id: 7, value: 'Contact' }
+        { id: 1, value: 'Home', sectionId: 'home-section' },
+        { id: 2, value: 'About', sectionId: 'about-section' },
+        { id: 3, value: 'Team', sectionId: 'features-section' },
+        { id: 4, value: 'Token', sectionId: 'token-section' },
+        { id: 5, value: 'Roadmap', sectionId: 'roadmap-section' },
+        { id: 6, value: 'FAQs', sectionId: 'faq-section' },
+        { id: 7, value: 'Contact', sectionId: 'contact-section' }
     ];
 
     useEffect(() => {
@@ -43,14 +47,15 @@ const Topbar = (props) => {
 
         <Navbar collapseOnSelect expand="lg" className={`
             navbar navbar-expand-lg navbar-light fixed-top padding-topbar
-            ${ scroll ? 'bg-whiteSmoke' : '' }
+            ${ (scroll || showMenu) ? 'bg-whiteSmoke' : '' }
         `}>
         
             <NavLink to={`/${Routes.main}`}>
                 <Avatar medium src={Images.logo} />
             </NavLink>
         
-            <Navbar.Toggle className="bg-yellow border-0" />
+            <Navbar.Toggle className={` ${scroll ? 'bg-yellow' : 'bg-whiteSmoke'} border-0`} 
+            onClick={() => setShowMenu(!showMenu)} />
 
             <Navbar.Collapse>
                 <Nav className="navbar-nav ml-auto">
@@ -58,18 +63,22 @@ const Topbar = (props) => {
                     {
                         data.map((link, i) => (
                             <Nav.Item 
-                                className={` nav-item p-0 nav-links ${ (i === 0) ? 'gradient-apply' : 'inactive-link' } `} 
-                                key={i}>
-                                <Nav.Link eventKey={link.id} as={NavLink} to="" 
-                                className={ scroll ? 'text-black font-weight-bold' : 'text-white' }>
-                                { link.value }
-                                </Nav.Link>
+                                onClick={() => clickLink({ value: link.value.toLowerCase(), sectionId: link.sectionId })}
+                                className={` nav-item p-0 nav-links 
+                                    ${ (currentState.toLowerCase() === link.value.toLowerCase()) ? 'gradient-apply' : 'inactive-link' } `} 
+                                key={i}
+                            >
+                                
+                                <span className={ (scroll || showMenu) ? 'text-black font-weight-bold' : 'text-white' }>
+                                    { link.value }
+                                </span>
+
                             </Nav.Item>
                         ))
                     }
 
                     <NavLink exact to={`/${Routes.connect}`} className={`connect-wallet pb-1 
-                        ${ scroll ? 'inactive-link-dark' : 'inactive-link' } `} 
+                        ${ (scroll || showMenu) ? 'inactive-link-dark' : 'inactive-link' } `} 
                         activeClassName="gradient-apply pt-1">
                         
                         Connect Wallet <BiChevronDown className="ml-1" style={{ fontSize: '18px' }} />

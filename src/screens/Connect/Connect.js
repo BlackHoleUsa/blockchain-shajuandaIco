@@ -28,7 +28,12 @@ const Connect = (props) => {
             <img alt="" src={Images.bgHeader} className="position-absolute w-50 h-100"
             style={{ left: '-18%' }} />
             
-            <Topbar />
+            <Topbar 
+                currentState={''} 
+                clickLink={({ value, sectionId }) => {
+                    console.log(value);
+                }} 
+            />
 
             <div className="app-flex-column justify-content-center align-items-center w-100 h-50">
                 <div className="text-white font-30px">Holidays</div>
