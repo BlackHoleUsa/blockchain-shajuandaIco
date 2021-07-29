@@ -103,14 +103,14 @@ const Topbar = (props) => {
                     >
                         {
                             !state?.connection ? <>Connect Wallet <BiChevronDown className="ml-1 font-18px" /></>
-                                : <div className="app-flex-row align-items-center text-white justify-content-center">
+                                : <div className="app-flex-row align-items-center text-white justify-content-center p-0">
 
-                                    <div className="app-flex-column bg-blue align-items-center justify-content-center p-2 font-14px rounded-circle"
+                                    <div className="app-flex-column bg-lightPrimary align-items-center justify-content-center font-14px rounded-circle"
                                         style={{ width: '32px', height: '32px' }}>
                                         U
                                     </div>
 
-                                    <span className="font-14px ml-3"> {state?.address[0]?.substr(0, 10)} </span>
+                                    <span className="font-14px ml-2"> {state?.address[0]?.substr(0, 10)} </span>
 
                                 </div>
                         }
