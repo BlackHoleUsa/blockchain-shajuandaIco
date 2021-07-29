@@ -5,16 +5,29 @@ import { Images } from '../../Assets/Images';
 import { Routes } from '../../Routes/Routes';
 import { Avatar } from '../Avatar/Avatar';
 import { BiChevronDown } from 'react-icons/bi';
-import { Nav, Navbar} from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
+import Web3 from "web3";
+import { reducer } from '../../redux/reducer/reducer';
+import { initialState } from '../../redux/reducer/state';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { connectMetaMask, checkAlreadyConnectedMetaMask } from '../../redux/thunk/thunk';
 
 
 const Topbar = (props) => {
-    
-    const [ scroll, setScroll ] = useState(false);
 
-    const [ showMenu, setShowMenu ] = useState(false);
+    const dispatch = useDispatch();
+    const state = useSelector(state => state);
+
+    const [scroll, setScroll] = useState(false);
+
+    const [showMenu, setShowMenu] = useState(false);
 
     const { currentState, clickLink } = props;
+
+    const connectToMetaMask = () => {
+        dispatch(connectMetaMask());
+      };
 
     const data = [
         { id: 1, value: 'Home', sectionId: 'home-section' },
@@ -28,62 +41,92 @@ const Topbar = (props) => {
 
     useEffect(() => {
         window.addEventListener('scroll', listenToScroll)
+        const interval = setInterval(() => {
+            dispatch(checkAlreadyConnectedMetaMask(state?.connection));
+        }, 3000);
+      
+        return () => {
+            clearInterval(interval);
+        };
     }, []);
 
     const listenToScroll = () => {
         let i = 0;
 
-        if(window.pageYOffset > 118){
-            i = i+1;
-            if(i === 1){
+        if (window.pageYOffset > 118) {
+            i = i + 1;
+            if (i === 1) {
                 setScroll(true);
             }
-        } else{
+        } else {
             setScroll(false);
         }
     }
 
-    return(
+    return (
 
         <Navbar collapseOnSelect expand="lg" className={`
             navbar navbar-expand-lg navbar-light fixed-top padding-topbar
-            ${ (scroll || showMenu) ? 'bg-whiteSmoke' : '' }
+            ${(scroll || showMenu) ? 'bg-whiteSmoke' : ''}
         `}>
-        
+
             <NavLink to={`/${Routes.main}`}>
                 <Avatar medium src={Images.logo} />
             </NavLink>
-        
-            <Navbar.Toggle className={` ${scroll ? 'bg-yellow' : 'bg-whiteSmoke'} border-0`} 
-            onClick={() => setShowMenu(!showMenu)} />
+
+            <Navbar.Toggle className={` ${scroll ? 'bg-yellow' : 'bg-whiteSmoke'} border-0`}
+                onClick={() => setShowMenu(!showMenu)} />
 
             <Navbar.Collapse>
                 <Nav className="navbar-nav ml-auto">
 
                     {
                         data.map((link, i) => (
-                            <Nav.Item 
+                            <Nav.Item
                                 onClick={() => clickLink({ value: link.value.toLowerCase(), sectionId: link.sectionId })}
                                 className={` nav-item p-0 nav-links 
-                                    ${ (currentState.toLowerCase() === link.value.toLowerCase()) ? 'gradient-apply' : 'inactive-link' } `} 
+                                    ${(currentState.toLowerCase() === link.value.toLowerCase()) ? 'gradient-apply' : 'inactive-link'} `}
                                 key={i}
                             >
-                                
-                                <span className={ (scroll || showMenu) ? 'text-black font-weight-bold' : 'text-white' }>
-                                    { link.value }
+
+                                <span className={(scroll || showMenu) ? 'text-black font-weight-bold' : 'text-white'}>
+                                    {link.value}
                                 </span>
 
                             </Nav.Item>
                         ))
                     }
 
-                    <NavLink exact to={`/${Routes.connect}`} className={`connect-wallet pb-1 
-                        ${ (scroll || showMenu) ? 'inactive-link-dark' : 'inactive-link' } `} 
-                        activeClassName="gradient-apply pt-1">
-                        
-                        Connect Wallet <BiChevronDown className="ml-1" style={{ fontSize: '18px' }} />
-                    
-                    </NavLink>
+                    <button className="connect-wallet pb-0 gradient-apply border-0"
+                        onClick={connectToMetaMask}
+                        disabled={state?.connection}
+                    >
+                        {
+                            !state?.connection ? <>Connect Wallet <BiChevronDown className="ml-1 font-18px" /></>
+                                : <div className="app-flex-row align-items-center text-white justify-content-center">
+
+                                    <div className="app-flex-column bg-blue align-items-center justify-content-center p-2 font-14px rounded-circle"
+                                        style={{ width: '32px', height: '32px' }}>
+                                        U
+                                    </div>
+
+                                    <span className="font-14px ml-3"> {state?.address[0]?.substr(0, 10)} </span>
+
+                                </div>
+                        }
+
+                    </button>
+
+                    {
+                        state?.connection &&
+                        <NavLink exact to={`/${Routes.connect}`} className={`connect-wallet pb-1 w-auto pl-4 pr-3 ml-2
+                          ${(scroll || showMenu) ? 'inactive-link-dark' : 'inactive-link'} `}
+                            activeClassName="gradient-apply pt-1">
+
+                            BUY <BiChevronDown className="ml-1 font-18px" />
+
+                        </NavLink>
+                    }
 
                 </Nav>
             </Navbar.Collapse>
@@ -93,5 +136,5 @@ const Topbar = (props) => {
     );
 
 }
- 
+
 export default Topbar;

@@ -9,13 +9,29 @@ const CustomModal = (props) => {
 
     const [ value, setValue ] = useState('');
 
+    const [ convertedValue, setConvertedValue ] = useState('');
+
+    const clickBuyCoin = () => {
+
+        if(!value){
+            alert('Plz Write Amount.');
+        } 
+        else{
+            
+            // place here your logic
+            
+        }
+    }
+
+    const getRegExp = ['e', 'E', '+', '-', '.'];
+
     return(
 
         <Modal show={show} onHide={handleClose} centered 
         backdrop="static" autoFocus={false}>
             
             <div className="px-0 py-4 bg-secondary rounded position-relative w-100"
-            style={{ margin: '0px', border: '3px solid var(--primary)', height: '33vh', outline: 'none' }}>
+            style={{ margin: '0px', border: '3px solid var(--primary)', outline: 'none' }}>
     
                 <FaTimes className="position-absolute text-white cursor-pointer-sort" 
                     style={{ right: '10px', top: '10px' }} onClick={handleClose} />
@@ -25,11 +41,27 @@ const CustomModal = (props) => {
                     <h4 className="text-center text-white">Total: 100 ETH</h4>
 
                     <div className="app-flex-row w-100 justify-content-center align-items-center my-4">
-                        <h4 className="text-center text-white mr-3">Buy</h4>
-                        <input className="buy-coin-filed" placeholder="Enter Value" value={value} onChange={(e) => setValue(e.target.value)} />
+                    <table>
+                            
+                            <tr>
+                                <td><h4 className="text-center text-white mr-3">Buy</h4></td>
+                                <td>
+                                   <input className="buy-coin-filed" placeholder="Enter Value" value={value} onChange={(e) => {
+                                            setValue(e.target.value); 
+                                            setConvertedValue(e.target.value/1000);
+                                        }} onKeyDown={(e) => getRegExp.includes(e.key) && e.preventDefault()}/>
+                                </td>
+                                </tr>
+                            <tr>
+                                <td></td>
+                                <td><input className="buy-coin-calculate" readOnly={true}
+                                    value={`${convertedValue} ETH`} type="text" />
+                                </td>
+                            </tr>
+                        </table>
                     </div>
 
-                    <button className="buy-coin-btn">
+                    <button className="buy-coin-btn" onClick={clickBuyCoin}>
                         buy now
                     </button>
                 </div>

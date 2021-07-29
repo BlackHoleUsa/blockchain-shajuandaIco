@@ -10,12 +10,24 @@ import { HashRouter as Router } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './custom.scss';
 
+import { Provider } from 'react-redux';
+import { persistStore } from 'redux-persist';
+import { PersistGate } from 'redux-persist/lib/integration/react';
+import { configureStore } from './redux/store';
+
+const store = configureStore();
+
+const persistor = persistStore(store);
+
+
 ReactDOM.render(
-  <React.StrictMode>
-      <Router>
+  <Provider store={store}>
+    <PersistGate loading={<div>Loading...</div>} persistor={persistor}>
+        <Router>
         <Shajuanda />
-      </Router>
-  </React.StrictMode>,
+        </Router>
+    </PersistGate>
+  </Provider>,
   document.getElementById('root')
 );
 

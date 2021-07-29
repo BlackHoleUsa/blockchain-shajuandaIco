@@ -13,7 +13,7 @@
     color: var(--white);
     margin: 0px auto;
 }
-
+.buy-coin-calculate,
 .buy-coin-filed{
     width: 228px;
     height: 41px;
@@ -24,7 +24,12 @@
     color: var(--white);
     padding: 0px 12px;
 }
-
+.buy-coin-calculate{
+    margin-top:10px;
+}
+.buy-coin-calculate:focus, .buy-coin-calculate:active{
+    outline: none;
+}
 .buy-coin-filed::placeholder{
     color: gray;
 }
