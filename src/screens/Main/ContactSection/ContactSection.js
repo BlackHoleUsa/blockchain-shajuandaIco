@@ -39,7 +39,7 @@ const ContactSection = (props) => {
 
             </Row>
 
-            <div className="info">
+            <div className="info"id="contact-section">
                 <h6 className="font-36px mb-2 mt-5 pt-5">We Are Happy To Answer Any Question You Have For Us</h6>
                 <p className="font-16px mb-4">
                     Simply fill up the Foam below we will Contact you.

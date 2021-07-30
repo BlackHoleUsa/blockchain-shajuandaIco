@@ -1,4 +1,4 @@
-import { CONNECT_META_MASK, BUY_COIN } from '../types/types';
+import { CONNECT_META_MASK, BUY_COIN, SET_USER_BALANCE } from '../types/types';
 
 import { initialState } from './state';
 
@@ -16,6 +16,13 @@ export const reducer = (state = initialState, action) => {
 				connection,
 				address
 			};
+		}
+
+		case SET_USER_BALANCE: {
+			return {
+				...state,
+				userBalance: parseFloat(parseInt(payload) / 1E18).toFixed(1)
+			}
 		}
 
 		case BUY_COIN: {

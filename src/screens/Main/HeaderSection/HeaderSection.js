@@ -1,15 +1,49 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './HeaderSection.css';
 import { Row, Col } from 'react-bootstrap'; 
 import BorderBox from '../../../components/BorderBox/BorderBox';
 
 const HeaderSection = (props) => {
     
+    const [day, setDay] = useState(0);
+    const [min, setMin] = useState(0);
+    const [sec, setSec] = useState(0);
+
+    useEffect(() => {
+
+        let days, minutes, seconds;
+
+        // Get today's date and time
+        const countDownDate = new Date("Dec 30, 2021 15:37:25").getTime();
+        const timer = setInterval(() => {
+
+            const now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            const distance = countDownDate - now;
+            
+            // Time calculations for days, month, minutes and seconds
+            days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            setSec(seconds);
+            setMin(minutes);
+            setDay(days);
+
+            if (distance < 0) {
+                clearInterval(timer);
+            }
+            
+        }, 1000);
+
+    }, []);
+
     const data = [
-        { time: 12, value: 'Month' },
-        { time: 22, value: 'Day' },
-        { time: 32, value: 'Minute' },
-        { time: 42, value: 'Seconds' }
+        { time: (new Date("Dec 30, 2021 15:37:25").getMonth()+1) - (new Date().getMonth()+1), value: 'Month' },
+        { time: day, value: 'Day' },
+        { time: min, value: 'Minute' },
+        { time: sec, value: 'Seconds' }
     ];
 
     return(

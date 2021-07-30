@@ -1,4 +1,5 @@
 export const initialState = {
     address: [],
-    connection: false
+    connection: false,
+    userBalance: 0
 };

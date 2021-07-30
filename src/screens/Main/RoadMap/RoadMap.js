@@ -19,7 +19,7 @@ const RoadMapSection = (props) => {
 
             <img alt="" src={Images.teamHeadings} className="w-100 mt-5" />
 
-            <h6 className="font-36px mb-2 mt-5 pt-5">Our Awesome Team</h6>
+            <h6 className="font-36px mb-2 mt-5 pt-5" id="team-section">Our Awesome Team</h6>
             <p className="font-16px">
                 ICO seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver.
             </p>

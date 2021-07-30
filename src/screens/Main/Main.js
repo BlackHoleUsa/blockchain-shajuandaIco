@@ -31,7 +31,7 @@ const Main = () => {
             componentState: 'roadmap', sectionId: 'roadmap-section' },
 
         { id: 6, component: <ContactSection />, className: 'main-container pt-0 bg-lightPrimary', 
-            componentState: 'team', sectionId: 'contact-section' },
+            componentState: 'team', sectionId: '' },
 
         { id: 7, component: <Footer />, className: 'main-container pt-0 bg-primary', 
             componentState: 'footer', sectionId: 'faq-section' }

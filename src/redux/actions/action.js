@@ -1,4 +1,4 @@
-import { CONNECT_META_MASK, BUY_COIN } from '../types/types';
+import { CONNECT_META_MASK, BUY_COIN, SET_USER_BALANCE } from '../types/types';
 
 export const connectMetaMaskAction = (data) => ({
     type: CONNECT_META_MASK,
@@ -8,4 +8,9 @@ export const connectMetaMaskAction = (data) => ({
 export const buyCoin = (data) => ({
     type: BUY_COIN,
     payload: data
+});
+
+export const setUserBalance = (balance) => ({
+    type: SET_USER_BALANCE,
+    payload: balance
 });

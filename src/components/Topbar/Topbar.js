@@ -11,7 +11,7 @@ import { reducer } from '../../redux/reducer/reducer';
 import { initialState } from '../../redux/reducer/state';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { connectMetaMask, checkAlreadyConnectedMetaMask } from '../../redux/thunk/thunk';
+import { connectMetaMask, checkAlreadyConnectedMetaMask } from 'redux/thunk/thunk';
 
 
 const Topbar = (props) => {
@@ -32,7 +32,7 @@ const Topbar = (props) => {
     const data = [
         { id: 1, value: 'Home', sectionId: 'home-section' },
         { id: 2, value: 'About', sectionId: 'about-section' },
-        { id: 3, value: 'Team', sectionId: 'features-section' },
+        { id: 3, value: 'Team', sectionId: 'team-section' },
         { id: 4, value: 'Token', sectionId: 'token-section' },
         { id: 5, value: 'Roadmap', sectionId: 'roadmap-section' },
         { id: 6, value: 'FAQs', sectionId: 'faq-section' },
