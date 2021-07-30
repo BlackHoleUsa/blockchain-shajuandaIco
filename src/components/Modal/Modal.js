@@ -2,6 +2,14 @@ import React, { useState } from 'react';
 import './Modal.css';
 import { FaTimes } from 'react-icons/fa';
 import { Modal } from 'react-bootstrap';
+import Web3 from "web3";
+import { ethers } from "ethers";
+
+
+import {
+    SALE_CONTRACT_ABI,
+    SALE_CONTRACT_ADDRESS,
+  } from "../../Contract/CrowdsaleContract" ;
 
 const CustomModal = (props) => {
     
@@ -11,14 +19,38 @@ const CustomModal = (props) => {
 
     const [ convertedValue, setConvertedValue ] = useState('');
 
-    const clickBuyCoin = () => {
+    const clickBuyCoin = async () => {
 
         if(!value){
             alert('Plz Write Amount.');
         } 
         else{
+
+            const web3 = new Web3(Web3.givenProvider);
+            const provider = new ethers.providers.Web3Provider(window.ethereum);
+            const signer = provider.getSigner();
+
+            const contract = new ethers.Contract(
+                SALE_CONTRACT_ADDRESS,
+                SALE_CONTRACT_ABI,
+                signer
+            );
+
+            console.log(convertedValue);
+            let weiamount = Web3.utils.toWei(convertedValue.toString(), 'ether');
             
-            // place here your logic
+            const accounts = await web3.eth.getAccounts();
+
+            console.log(await web3.eth.getBalance(accounts[0]));
+            
+            const transaction = await contract.buyTokens(accounts[0], {value: weiamount})
+            .then(function (txHash) {
+                console.log('Transaction sent')
+              })
+            .catch(
+                //   alert("Transaction failed")
+            );
+            
             
         }
     }
