@@ -43,7 +43,7 @@ export const connectMetaMask = () => async dispatch => {
           console.log(window.ethereum);
           updateAddress(dispatch);
         } catch (err) {
-          alert(err);
+          alert('Something went wrong.');
         }
       } else if (window.web3) {
         window.web3 = new Web3(window.web3.currentProvider);
