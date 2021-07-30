@@ -46,7 +46,7 @@ const CustomModal = (props) => {
                             <tr>
                                 <td><h4 className="text-center text-white mr-3">Buy</h4></td>
                                 <td>
-                                   <input className="buy-coin-filed" placeholder="Enter Value" value={value} onChange={(e) => {
+                                   <input className="buy-coin-filed" type="number" placeholder="Enter Value" value={value} onChange={(e) => {
                                             setValue(e.target.value); 
                                             setConvertedValue(e.target.value/1000);
                                         }} onKeyDown={(e) => getRegExp.includes(e.key) && e.preventDefault()}/>
