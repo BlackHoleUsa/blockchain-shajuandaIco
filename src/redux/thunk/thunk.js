@@ -21,14 +21,14 @@ export const checkAlreadyConnectedMetaMask = (currentConnection) => async dispat
       if (accounts?.length) {
         
         window.web3.eth.getBalance(accounts[0]).then((res) => {
-          dispatch(setUserBalance(res));
+          dispatch(setUserBalance({ flag: true, balance: res }));
         });
 
         dispatch(connectMetaMaskAction({ connection: true, address: accounts }));
       }
       else {
         dispatch(connectMetaMaskAction({ connection: false, address: [] }));
-        dispatch(setUserBalance(0));
+        dispatch(setUserBalance({ flag: false, balance: 0 }));
         if(currentConnection){
           window.location.reload();
         }
@@ -66,10 +66,10 @@ const updateAddress = async (dispatch) => {
 
     if (accounts) {
         dispatch(connectMetaMaskAction({ connection: true, address: accounts }));
-        web3.eth.getBalance(accounts[0]).then((res) => dispatch(setUserBalance(res)));
+        web3.eth.getBalance(accounts[0]).then((res) => dispatch(setUserBalance({ flag: true, balance: res })));
     }
     else{
         dispatch(connectMetaMaskAction({ connection: false, address: [] }));
-        dispatch(setUserBalance(0));
+        dispatch(setUserBalance({ flag: false, balance: 0 }));
     }
 };

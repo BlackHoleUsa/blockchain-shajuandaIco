@@ -5,16 +5,17 @@ import { Modal, Spinner } from 'react-bootstrap';
 import Web3 from "web3";
 import { ethers } from "ethers";
 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import {
     SALE_CONTRACT_ABI,
     SALE_CONTRACT_ADDRESS,
 } from "Contract/CrowdsaleContract" ;
-import { checkAlreadyConnectedMetaMask } from 'redux/thunk/thunk';
+import { setUserBalance } from 'redux/actions/action';
 
 const CustomModal = (props) => {
     
+    const dispatch = useDispatch();
     const state = useSelector(state => state);
 
     const { show, handleClose } = props;
@@ -52,8 +53,9 @@ const CustomModal = (props) => {
                     setLoading(false);
                     setValue('');
                     setConvertedValue('');
-                    checkAlreadyConnectedMetaMask(state?.connection);
                     alert("Transaction Complete", remainingBalance);
+                    dispatch(setUserBalance({ flag: false, balance: state?.userBalance - convertedValue }));
+                    handleClose();
                 })
                 .catch((err) => {
                     setLoading(false);
@@ -86,23 +88,24 @@ const CustomModal = (props) => {
                     <h4 className="text-center text-white">Total: { state?.userBalance } ETH</h4>
 
                     <div className="app-flex-row w-100 justify-content-center align-items-center my-4">
-                    <table>
-                            
-                            <tr>
-                                <td><h4 className="text-center text-white mr-3">Buy</h4></td>
-                                <td>
-                                   <input className="buy-coin-filed" type="number" placeholder="Enter Value" value={value} onChange={(e) => {
-                                            setValue(e.target.value); 
-                                            setConvertedValue(e.target.value/1000);
-                                        }} onKeyDown={(e) => getRegExp.includes(e.key) && e.preventDefault()}/>
-                                </td>
+                        <table>                        
+                            <tbody>
+                                <tr>
+                                    <td><h4 className="text-center text-white mr-3">Buy</h4></td>
+                                    <td>
+                                    <input className="buy-coin-filed" type="number" placeholder="Enter Value" value={value} onChange={(e) => {
+                                                setValue(e.target.value); 
+                                                setConvertedValue(e.target.value/1000);
+                                            }} onKeyDown={(e) => getRegExp.includes(e.key) && e.preventDefault()}/>
+                                    </td>
+                                    </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><input className="buy-coin-calculate" readOnly={true}
+                                        value={`${convertedValue} ETH`} type="text" />
+                                    </td>
                                 </tr>
-                            <tr>
-                                <td></td>
-                                <td><input className="buy-coin-calculate" readOnly={true}
-                                    value={`${convertedValue} ETH`} type="text" />
-                                </td>
-                            </tr>
+                            </tbody>
                         </table>
                     </div>
 

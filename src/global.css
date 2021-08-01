@@ -54,7 +54,13 @@
     cursor: pointer;
 }
 
+
 @media screen and (max-width: 767px) {
+  
+  .remove-margins{
+    margin: 10px 0px !important;
+  }
+
   .font-36px{
     font-size: 30px !important;
   }

@@ -52,8 +52,8 @@ const Main = () => {
     }
 
     const onScroll = (e) => {
-        console.log(e);
-        console.log(window.pageYOffset);
+        // console.log(e);
+        // console.log(window.pageYOffset);
     }
 
     return(

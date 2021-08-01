@@ -31,7 +31,7 @@ const CustomAccordian = (props) => {
 
                 <Accordion.Collapse eventKey="0">
                 
-                    <Card.Body className="font-16px text-white">
+                    <Card.Body className="font-16px text-white w-100 text-left text-justify">
                         { text }
                     </Card.Body>
                 

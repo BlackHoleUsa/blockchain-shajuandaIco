@@ -21,7 +21,7 @@ const Footer = (props) => {
 
                 <Col xs={12} sm={6} md={6} lg={4} xl={4}>
                     <div className="w-100 app-flex-column">
-                        <img alt="" src={Images.logo} width="112px" />
+                        <img alt="" src={Images.logo} width="80px" />
                         <span className="font-16px my-3">
                             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium cia deserunt mollitia animi.
                         </span>

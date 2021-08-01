@@ -6,6 +6,7 @@ import BorderBox from '../../../components/BorderBox/BorderBox';
 const HeaderSection = (props) => {
     
     const [day, setDay] = useState(0);
+    const [hour, setHour] = useState(0);
     const [min, setMin] = useState(0);
     const [sec, setSec] = useState(0);
 
@@ -29,6 +30,7 @@ const HeaderSection = (props) => {
 
             setSec(seconds);
             setMin(minutes);
+            setHour(days * 24);
             setDay(days);
 
             if (distance < 0) {
@@ -37,12 +39,19 @@ const HeaderSection = (props) => {
             
         }, 1000);
 
+        return () => {
+            setSec(seconds);
+            setMin(minutes);
+            setHour(days * 24);
+            setDay(days);
+        };
+
     }, []);
 
     const data = [
-        { time: (new Date("Dec 30, 2021 15:37:25").getMonth()+1) - (new Date().getMonth()+1), value: 'Month' },
-        { time: day, value: 'Day' },
-        { time: min, value: 'Minute' },
+        { time: day, value: 'Days' },
+        { time: hour, value: 'Hours' },
+        { time: min, value: 'Minutes' },
         { time: sec, value: 'Seconds' }
     ];
 

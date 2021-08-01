@@ -19,9 +19,11 @@ export const reducer = (state = initialState, action) => {
 		}
 
 		case SET_USER_BALANCE: {
+			const { flag, balance } = payload;
+
 			return {
 				...state,
-				userBalance: parseFloat(parseInt(payload) / 1E18).toFixed(1)
+				userBalance: flag ? parseFloat(parseInt(balance) / 1E18).toFixed(1) : balance
 			}
 		}
 

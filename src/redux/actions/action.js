@@ -10,7 +10,7 @@ export const buyCoin = (data) => ({
     payload: data
 });
 
-export const setUserBalance = (balance) => ({
+export const setUserBalance = (data) => ({
     type: SET_USER_BALANCE,
-    payload: balance
+    payload: data
 });

@@ -97,7 +97,7 @@ const Topbar = (props) => {
                         ))
                     }
 
-                    <button className="connect-wallet pb-0 gradient-apply border-0"
+                    <button className="connect-wallet pb-0 gradient-apply border-0 connect-meta-mask"
                         onClick={connectToMetaMask}
                         disabled={state?.connection}
                     >
@@ -119,9 +119,8 @@ const Topbar = (props) => {
 
                     {
                         state?.connection &&
-                        <NavLink exact to={`/${Routes.connect}`} className={`connect-wallet pb-1 w-auto pl-4 pr-3 ml-2
-                          ${(scroll || showMenu) ? 'inactive-link-dark' : 'inactive-link'} `}
-                            activeClassName="gradient-apply pt-1">
+                        <NavLink exact to={`/${Routes.connect}`} className={`connect-wallet gradient-apply pb-0 w-auto pl-4 pr-3 margin-buy-btn
+                          ${(scroll || showMenu) ? 'inactive-link-dark' : 'inactive-link'} `}>
 
                             BUY <BiChevronDown className="ml-1 font-18px" />
 
