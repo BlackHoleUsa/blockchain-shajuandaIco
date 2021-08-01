@@ -1,8 +1,9 @@
 import React from 'react';
 import './RoadMap.css';
 import { Row, Col } from 'react-bootstrap'; 
-import { Images } from '../../../Assets/Images';
-import { teamMembers } from '../../../Assets/Data';
+import { Images } from 'Assets/Images';
+import { teamMembers } from 'Assets/Data';
+import RoadMapContain from 'components/RoadMapContain/RoadMapContain';
 
 const RoadMapSection = (props) => {
 
@@ -13,14 +14,14 @@ const RoadMapSection = (props) => {
         <div className="app-flex-column w-100 py-5 text-white justify-content-center align-items-center">
             
             <h6 className="font-36px mb-2">Roadmap To Success</h6>
-            <p className="font-16px">
+            <p className="font-16px d-block text-center">
             ICO seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver.
             </p>
 
-            <img alt="" src={Images.teamHeadings} className="w-100 mt-5" />
+            <RoadMapContain />
 
-            <h6 className="font-36px mb-2 mt-5 pt-5" id="team-section">Our Awesome Team</h6>
-            <p className="font-16px">
+            <h6 className="font-36px mb-2 mt-5 pt-3" id="team-section">Our Awesome Team</h6>
+            <p className="font-16px d-block text-center">
                 ICO seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver.
             </p>
 
@@ -29,10 +30,10 @@ const RoadMapSection = (props) => {
             <span className="font-16px mb-2">
                 Business owner
             </span>
-            <span className="font-16px mb-3">
+            <span className="font-16px mb-3 d-block text-center">
                 White-Founder-IT Consulting Expert-Entrepreneur Grambling State University
             </span>
-            <span className="font-16px text-center">
+            <span className="font-16px text-center d-block">
                 Over 17 years of leadership and administrative experience in the IT industry.Managed large portfolio/programs/projects including testing (QA) and development and High Enterprise applications.Over nine years of implementing best practices and gathering requirements for Quality Assurance methodology for various software development projects, services, and products.Managed projects, teams, applications with multi-million-dollar budgets, P&L, SOW, RFP ($7-20 million).
             </span>
 

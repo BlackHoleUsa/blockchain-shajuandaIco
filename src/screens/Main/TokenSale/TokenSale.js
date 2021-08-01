@@ -12,12 +12,12 @@ const TokenSaleSection = (props) => {
         <div className="app-flex-column w-100 py-5 text-white justify-content-center align-items-center token-section">
             
             <h6 className="font-28px mb-1">Token Sale</h6>
-            <p className="font-16px">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p className="font-16px d-block text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 
             {
                 arr?.map((allocate, i) => (
                     <React.Fragment key={i}>
-                        <h6 className={`font-28px my-5 ${ i === 0 ? 'pt-2' : 'pt-5' } text-uppercase`}>
+                        <h6 className={`font-28px my-5 pt-2 text-uppercase`}>
                             { i === 0 ? 'token' : 'funds' } ALLOCATION
                         </h6>
                         <div className="evenly-content">

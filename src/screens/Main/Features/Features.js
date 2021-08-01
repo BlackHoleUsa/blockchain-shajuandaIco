@@ -49,7 +49,7 @@ const FeatureSection = (props) => {
                 <div className="w-100 app-flex-column align-items-center justify-content-center feature-section text-white">
 
                     <h6 className="font-28px mb-1">Features</h6>
-                    <p className="font-16px">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <p className="font-16px d-block text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 
                     <Row className="mx-0 mt-5 p-0">
                         {
