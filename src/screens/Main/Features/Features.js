@@ -15,13 +15,13 @@ const FeatureSection = (props) => {
                 
                 <div className="w-100 app-flex-column align-items-center justify-content-center exchange-section text-white">
 
-                    <h6 className="font-28px mb-5">Coin Exchange Rates</h6>
+                    <h6 className="font-28px mb-5 heading-font">Coin Exchange Rates</h6>
 
                     <BorderBox className="border-box-exchange" feature={true}>
                         <div className="w-100 app-flex-column align-items-center justify-content-center pb-3 pt-4 border-box-exchange-inner">
                             <div className="w-100 app-flex-row align-items-center justify-content-center">
                                 <img alt="" src={Images.ctn} />
-                                <h6 className="font-30px ml-3">Ethereum (ETH)</h6>
+                                <h6 className="font-30px ml-3 heading-font">Ethereum (ETH)</h6>
                             </div>
                             <Row className="mx-0 mt-2 p-0">
                                 {
@@ -31,7 +31,7 @@ const FeatureSection = (props) => {
                                                 <div className="w-100 app-flex-column px-4 mb-4 align-items-center text-center justify-content-center" 
                                                 >
                                                     <h6 className="font-28px pt-4 pb-2">{data.coin}</h6>
-                                                    <p className="font-16px">{data.rate}</p>
+                                                    <p className="font-16px paragraph-font">{data.rate}</p>
                                                 </div>
                                             </Col>
                                             { i === 2 && <Col xs={12}>
@@ -48,8 +48,8 @@ const FeatureSection = (props) => {
 
                 <div className="w-100 app-flex-column align-items-center justify-content-center feature-section text-white">
 
-                    <h6 className="font-28px mb-1">Features</h6>
-                    <p className="font-16px d-block text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <h6 className="font-28px mb-1 heading-font">Features</h6>
+                    <p className="font-16px d-block text-center paragraph-font">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 
                     <Row className="mx-0 mt-5 p-0">
                         {
@@ -58,8 +58,8 @@ const FeatureSection = (props) => {
                                     <div className="w-100 app-flex-column px-4 mb-4 align-items-center text-center justify-content-center" 
                                     style={{ height: '380px', border: '3px solid black' }}>
                                         <img alt="" width="80px" src={data.image} />
-                                        <h6 className="font-20px pt-4 pb-2">{data.heading}</h6>
-                                        <p className="font-16px">{data.text}</p>
+                                        <h6 className="font-20px pt-4 pb-2 heading-font">{data.heading}</h6>
+                                        <p className="font-16px paragraph-font">{data.text}</p>
                                     </div>
                                 </Col>
                             ))

@@ -63,10 +63,10 @@ const HeaderSection = (props) => {
 
                 <div className="app-flex-column header-left-section pr-2 pt-4">
 
-                    <h6>With every Sunrise, invest wise with Cryptocurrency.</h6> <br />
-                    <p>Our token, SA RA, will give investors the opportunity to acquire and accumulate wealth through digital finance.</p>
+                    <h6 className="heading-font">With every Sunrise, invest wise with Cryptocurrency.</h6> <br />
+                    <p className="paragraph-font">Our token, SA RA, will give investors the opportunity to acquire and accumulate wealth through digital finance.</p>
                     <br />
-                    <button className="gradient-apply border-0">
+                    <button className="gradient-apply border-0 paragraph-font">
                         Get Started
                     </button>
                     <br />
@@ -78,8 +78,8 @@ const HeaderSection = (props) => {
             <Col xs={12} sm={12} md={6} lg={6} xl={6} className="m-0 p-0">
                 <div className="h-100 w-100 app-flex-column justify-content-center align-items-center text-center header-right-section">
                     <BorderBox className="border-box">
-                        <h6 className="pt-3 pb-2">ICO Coin Start</h6>
-                        <span>Discount 70% From The Final Price</span>
+                        <h6 className="pt-3 pb-2 heading-font">ICO Coin Start</h6>
+                        <span className="heading-font">Discount 70% From The Final Price</span>
                         <div className="w-100 app-flex-row justify-content-between align-items-center px-4 flex-wrap" style={{ height: '190px' }}>
 
                             {
@@ -89,7 +89,7 @@ const HeaderSection = (props) => {
                                             <div className="time-box">
                                                 {time.time}
                                             </div>
-                                            <div className="text-center py-3" style={{ opacity: .35 }}>
+                                            <div className="text-center py-3 heading-font" style={{ opacity: .35 }}>
                                                 {time.value}
                                             </div>
                                         </div>                                        

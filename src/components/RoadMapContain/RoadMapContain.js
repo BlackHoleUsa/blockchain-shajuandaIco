@@ -13,7 +13,7 @@ const RoadMapContain = () => {
 
         <div className="road-map-contain app-flex-column w-100">
             
-            <FlexRow className="justify-content-around padding-flex-row flex-align-headings">
+            <FlexRow className="justify-content-around padding-flex-row flex-align-headings heading-font">
                 { 
                     timings.map((str, i) => (
                         <span key={i} className="font-18px text-roadMap mb-2">
@@ -23,7 +23,7 @@ const RoadMapContain = () => {
                 }
             </FlexRow>
 
-            <FlexRow className="justify-content-around padding-flex-row flex-align-headings">
+            <FlexRow className="justify-content-around padding-flex-row flex-align-headings heading-font">
                 { 
                     launch.map((str, i) => (
                         <span key={i} className="font-20px text-white font-weight-bold">
@@ -39,7 +39,7 @@ const RoadMapContain = () => {
             <FlexRow className="justify-content-around padding-flex-row d-lg-flex d-xl-flex d-md-flex d-sm-none remove-flex">
                 { 
                     launch.map((str, i) => (
-                        <span key={i} className="font-18px text-white text-center d-block text-road-map-margin">
+                        <span key={i} className="font-18px text-white text-center d-block text-road-map-margin paragraph-font">
                             Lorem ipsum is simply dummy text of the printings.
                         </span>
                     ))
@@ -49,7 +49,7 @@ const RoadMapContain = () => {
             <div className="w-100 app-flex-column show-flex">
                 { 
                     launch.map((str, i) => (
-                        <span key={i} className="font-18px text-white text-center d-block mb-2">
+                        <span key={i} className="font-18px text-white text-center d-block mb-2 paragraph-font">
                             Lorem ipsum is simply dummy text of the printings.
                         </span>
                     ))

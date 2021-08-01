@@ -48,3 +48,27 @@ h6 {
   transition: all 0.4s;
   background: var(--primary);
 }
+
+
+/* fonts added */
+@font-face {
+  font-family: "RobotoRegular";
+  src: local("RobotoRegular"),
+   url("./fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "OswaldVariableFontWght";
+  src: local("OswaldVariableFontWght"),
+   url("./fonts/Oswald-VariableFont_wght.ttf") format("truetype");
+  font-weight: 300 !important;
+}
+
+.heading-font{
+  font-family: "RobotoRegular" !important;
+}
+
+.paragraph-font{
+  font-family: "OswaldVariableFontWght" !important;
+}

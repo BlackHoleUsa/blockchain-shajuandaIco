@@ -10,6 +10,9 @@ import { HashRouter as Router } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './custom.scss';
 
+import './fonts/Roboto-Regular.ttf';
+import './fonts/Oswald-VariableFont_wght.ttf';
+
 import { Provider } from 'react-redux';
 import { persistStore } from 'redux-persist';
 import { PersistGate } from 'redux-persist/lib/integration/react';

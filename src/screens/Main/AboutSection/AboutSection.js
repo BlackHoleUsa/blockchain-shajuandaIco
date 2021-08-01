@@ -20,11 +20,11 @@ const AboutSection = (props) => {
                     <div className="h-100 w-100 app-flex-column justify-content-center align-items-center 
                         text-left about-right-section p-0">
                         <BorderBox className="border-box-about" adjust={true}>
-                            <h6 className="pb-3">About Block Chain Expert Solution</h6>
-                            <span className="w-100 text-justify">
+                            <h6 className="pb-3 heading-font">About Block Chain Expert Solution</h6>
+                            <span className="w-100 text-justify paragraph-font">
                             Our company is willing to give all people in the universe to have a chance to access financial assistance that will enable them to acquire wealth. Through the rich blockchaim technology and cryptocurrency, our investors will have chances of accessing digital finances which will help them to invest and build an enabling economy to all people. We are committed to ensure that individuals have gained their financial freedom which is not provided by the traditional financial systems rather, through the current digital financing.
                             </span>
-                            <button className="gradient-apply border-0 connect-wallet text-white mt-3" style={{ width: '190px' }}>
+                            <button className="gradient-apply border-0 connect-wallet text-white mt-3 paragraph-font" style={{ width: '190px' }}>
                                 Know About Ourself
                             </button>
                         </BorderBox>

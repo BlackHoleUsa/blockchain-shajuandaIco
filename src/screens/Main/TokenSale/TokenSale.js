@@ -11,13 +11,13 @@ const TokenSaleSection = (props) => {
 
         <div className="app-flex-column w-100 py-5 text-white justify-content-center align-items-center token-section">
             
-            <h6 className="font-28px mb-1">Token Sale</h6>
-            <p className="font-16px d-block text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <h6 className="font-28px mb-1 heading-font">Token Sale</h6>
+            <p className="font-16px d-block text-center paragraph-font">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 
             {
                 arr?.map((allocate, i) => (
                     <React.Fragment key={i}>
-                        <h6 className={`font-28px my-5 pt-2 text-uppercase`}>
+                        <h6 className={`font-28px my-5 pt-2 text-uppercase heading-font`}>
                             { i === 0 ? 'token' : 'funds' } ALLOCATION
                         </h6>
                         <div className="evenly-content">
@@ -43,8 +43,8 @@ const TokenSaleSection = (props) => {
 const GetContentText = ({ left }) => {
     return <div className={`app-flex-column text-white pb-4 ${ left ? 'justify-content-start align-items-end' : 
     'justify-content-end align-items-start' } `}>
-        <span className="mb-2 font-16px">Title one</span>
-        <span className="font-14px text-justify get-content-text">
+        <span className="mb-2 font-16px heading-font">Title one</span>
+        <span className="font-14px text-justify get-content-text paragraph-font">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsu
         </span>
     </div>

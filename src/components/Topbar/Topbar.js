@@ -84,7 +84,7 @@ const Topbar = (props) => {
                         data.map((link, i) => (
                             <Nav.Item
                                 onClick={() => clickLink({ value: link.value.toLowerCase(), sectionId: link.sectionId })}
-                                className={` nav-item p-0 nav-links 
+                                className={` nav-item p-0 nav-links heading-font
                                     ${(currentState.toLowerCase() === link.value.toLowerCase()) ? 'gradient-apply' : 'inactive-link'} `}
                                 key={i}
                             >
@@ -105,12 +105,12 @@ const Topbar = (props) => {
                             !state?.connection ? <>Connect Wallet <BiChevronDown className="ml-1 font-18px" /></>
                                 : <div className="app-flex-row align-items-center text-white justify-content-center p-0">
 
-                                    <div className="app-flex-column bg-lightPrimary align-items-center justify-content-center font-14px rounded-circle"
+                                    <div className="app-flex-column bg-lightPrimary align-items-center justify-content-center font-14px rounded-circle heading-font"
                                         style={{ width: '32px', height: '32px' }}>
                                         U
                                     </div>
 
-                                    <span className="font-14px ml-2"> {state?.address[0]?.substr(0, 10)} </span>
+                                    <span className="font-14px ml-2 heading-font"> {state?.address[0]?.substr(0, 10)} </span>
 
                                 </div>
                         }
@@ -119,7 +119,7 @@ const Topbar = (props) => {
 
                     {
                         state?.connection &&
-                        <NavLink exact to={`/${Routes.connect}`} className={`connect-wallet gradient-apply pb-0 w-auto pl-4 pr-3 margin-buy-btn
+                        <NavLink exact to={`/${Routes.connect}`} className={`connect-wallet gradient-apply pb-0 w-auto pl-4 pr-3 margin-buy-btn heading-font
                           ${(scroll || showMenu) ? 'inactive-link-dark' : 'inactive-link'} `}>
 
                             BUY <BiChevronDown className="ml-1 font-18px" />

@@ -19,7 +19,7 @@ const CustomAccordian = (props) => {
                 
                     <Accordion.Toggle as={Button} variant="link" eventKey="0" className="p-0 m-0 w-100">
                         
-                        <div className="w-100 app-flex-row align-items-center justify-content-between font-16px text-white"
+                        <div className="w-100 app-flex-row align-items-center justify-content-between font-16px text-white heading-font"
                         onClick={() => setClick(!click)}>
                             <span>{ heading }</span>
                             { click ? <HiMinusSm className="font-30px" /> : <HiPlus className="font-30px" /> }
@@ -31,7 +31,7 @@ const CustomAccordian = (props) => {
 
                 <Accordion.Collapse eventKey="0">
                 
-                    <Card.Body className="font-16px text-white w-100 text-left text-justify">
+                    <Card.Body className="font-16px text-white w-100 text-left text-justify paragraph-font">
                         { text }
                     </Card.Body>
                 

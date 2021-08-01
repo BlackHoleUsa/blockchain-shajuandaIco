@@ -85,15 +85,15 @@ const CustomModal = (props) => {
 
                 <div className="app-flex-column w-100 py-3 bg-secondary rounded m-0 px-0">
 
-                    <h4 className="text-center text-white">Total: { state?.userBalance } ETH</h4>
+                    <h4 className="text-center text-white heading-font">Total: { state?.userBalance } ETH</h4>
 
                     <div className="app-flex-row w-100 justify-content-center align-items-center my-4">
                         <table>                        
                             <tbody>
                                 <tr>
-                                    <td><h4 className="text-center text-white mr-3">Buy</h4></td>
+                                    <td><h4 className="text-center text-white mr-3 heading-font">Buy</h4></td>
                                     <td>
-                                    <input className="buy-coin-filed" type="number" placeholder="Enter Value" value={value} onChange={(e) => {
+                                    <input className="buy-coin-filed heading-font" type="number" placeholder="Enter Value" value={value} onChange={(e) => {
                                                 setValue(e.target.value); 
                                                 setConvertedValue(e.target.value/1000);
                                             }} onKeyDown={(e) => getRegExp.includes(e.key) && e.preventDefault()}/>
@@ -101,7 +101,7 @@ const CustomModal = (props) => {
                                     </tr>
                                 <tr>
                                     <td></td>
-                                    <td><input className="buy-coin-calculate" readOnly={true}
+                                    <td><input className="buy-coin-calculate heading-font" readOnly={true}
                                         value={`${convertedValue} ETH`} type="text" />
                                     </td>
                                 </tr>
@@ -109,7 +109,7 @@ const CustomModal = (props) => {
                         </table>
                     </div>
 
-                    <button className="buy-coin-btn" onClick={clickBuyCoin}>
+                    <button className="buy-coin-btn paragraph-font" onClick={clickBuyCoin}>
                         { loading ? <Spinner animation="border" size="sm" /> : 'buy now' }
                     </button>
                 </div>
