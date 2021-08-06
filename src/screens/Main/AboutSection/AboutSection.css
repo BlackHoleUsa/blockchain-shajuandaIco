@@ -1,13 +1,17 @@
 .about-right-section .border-box-about{
-    width: 450px;
+    width: 650px;
+    margin-right:15%;
+
 }
 
 .about-right-section h6{
-    font-size: 28px;    
+    font-size: 28px;
+    font-weight: bold;
 }
 
 .about-right-section span{
-    font-size: 18px;
+    font-size: 22px;
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px){

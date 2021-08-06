@@ -10,7 +10,7 @@ const SocialMedia = () => {
 
         <div className="social-media text-white">
             <div className="w-100 app-flex-row align-items-center justify-content-around">
-                <div className="font-23px w-50 text-center heading-font">Follow Us</div>
+                <div className="font-23px w-50 text-center heading-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>Follow Us</div>
                 <div className="app-flex-row align-items-center justify-content-center w-50 text-center">
                     <GrFacebookOption className={`${iconClass} mr-4`} />
                     <GrTwitter className={`${iconClass} mr-4`} />

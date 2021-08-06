@@ -67,7 +67,7 @@ const Topbar = (props) => {
 
         <Navbar collapseOnSelect expand="lg" className={`
             navbar navbar-expand-lg navbar-light fixed-top padding-topbar
-            ${(scroll || showMenu) ? 'bg-whiteSmoke' : ''}
+            ${(scroll || showMenu) ? 'bg-white' : ''}
         `}>
 
             <NavLink to={`/${Routes.main}`}>
@@ -97,9 +97,10 @@ const Topbar = (props) => {
                         ))
                     }
 
-                    <button className="connect-wallet pb-0 gradient-apply border-0 connect-meta-mask"
+                    <button className="connect-wallet pb-0 gradient-apply border-0 connect-meta-mask paragraph-font"
                         onClick={connectToMetaMask}
                         disabled={state?.connection}
+                        style={{color: 'white', fontWeight: 'bold', letterSpacing: '1px'}}
                     >
                         {
                             !state?.connection ? <>Connect Wallet <BiChevronDown className="ml-1 font-18px" /></>
@@ -119,7 +120,7 @@ const Topbar = (props) => {
 
                     {
                         state?.connection &&
-                        <NavLink exact to={`/${Routes.connect}`} className={`connect-wallet gradient-apply pb-0 w-auto pl-4 pr-3 margin-buy-btn heading-font
+                        <NavLink exact to={`/${Routes.connect}`} className={`connect-wallet gradient-apply pb-0 w-auto pl-4 pr-3 margin-buy-btn paragraph-font
                           ${(scroll || showMenu) ? 'inactive-link-dark' : 'inactive-link'} `}>
 
                             BUY <BiChevronDown className="ml-1 font-18px" />

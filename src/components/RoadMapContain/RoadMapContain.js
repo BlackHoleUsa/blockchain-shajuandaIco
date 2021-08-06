@@ -11,7 +11,7 @@ const RoadMapContain = () => {
 
     return(
 
-        <div className="road-map-contain app-flex-column w-100">
+        <div className="road-map-contain app-flex-column w-100" style={{marginBottom: '100px'}}>
             
             <FlexRow className="justify-content-around padding-flex-row flex-align-headings heading-font">
                 { 
@@ -39,7 +39,7 @@ const RoadMapContain = () => {
             <FlexRow className="justify-content-around padding-flex-row d-lg-flex d-xl-flex d-md-flex d-sm-none remove-flex">
                 { 
                     launch.map((str, i) => (
-                        <span key={i} className="font-18px text-white text-center d-block text-road-map-margin paragraph-font">
+                        <span key={i} className="font-20px text-white text-center d-block text-road-map-margin heading-font"style={{marginLeft:'3%', marginRight:'3%'}} >
                             Lorem ipsum is simply dummy text of the printings.
                         </span>
                     ))
@@ -49,7 +49,7 @@ const RoadMapContain = () => {
             <div className="w-100 app-flex-column show-flex">
                 { 
                     launch.map((str, i) => (
-                        <span key={i} className="font-18px text-white text-center d-block mb-2 paragraph-font">
+                        <span key={i} className="font-18px text-white text-center d-block mb-2 heading-font">
                             Lorem ipsum is simply dummy text of the printings.
                         </span>
                     ))
