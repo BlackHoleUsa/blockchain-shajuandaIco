@@ -10,6 +10,22 @@ export const getArgs = (args, callback) => {
 
 };
 
+export const getCoinsRates = (callback) => {
+  fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH&tsyms=USD,EUR,GBP')
+  .then((res) => res.json())
+  .then((res2) => {
+      
+      console.log(res2.DISPLAY.ETH);
+
+      callback({ status: true, data: res2.DISPLAY.ETH });
+
+  }).catch((err) => {
+
+    callback({ status: false, data: undefined });
+
+  });
+}
+
 export const checkAlreadyConnectedMetaMask = (currentConnection) => async dispatch => {
   
   if(window.web3){

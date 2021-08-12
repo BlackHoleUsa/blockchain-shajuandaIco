@@ -15,15 +15,6 @@ export const featureData = [
     { id: 4, heading: 'Lorem Ipsum', text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever", image: Images.line },
     { id: 5, heading: 'Lorem Ipsum', text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever", image: Images.mind },
     { id: 6, heading: 'Lorem Ipsum', text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever", image: Images.db }
-]
-
-export const exchangeRates = [
-    { coin: 'USD', rate: 283.55 },
-    { coin: 'EUR', rate: 244.89 },
-    { coin: 'GDP', rate: 221.03 },
-    { coin: '%1h', rate: 283.55 },
-    { coin: '%24h', rate: 283.55 },
-    { coin: '%7d', rate: -3.55 }
 ];
 
 export const teamMembers = [

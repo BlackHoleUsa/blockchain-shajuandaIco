@@ -1,11 +1,63 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Features.css';
-import { Row, Col } from 'react-bootstrap'; 
+import { Row, Col, Spinner } from 'react-bootstrap'; 
 import BorderBox from '../../../components/BorderBox/BorderBox';
 import { Images } from '../../../Assets/Images';
-import { featureData, exchangeRates } from '../../../Assets/Data';
+import { featureData } from '../../../Assets/Data';
+import {getCoinsRates} from '../../../redux/thunk/thunk';
 
 const FeatureSection = (props) => {
+
+    const [loading, setLoading] = useState(true);
+
+    const [rates, setRates] = useState(
+        [
+            { coin: 'USD', rate: 283.55 },
+            { coin: 'EUR', rate: 244.89 },
+            { coin: 'GBP', rate: 221.03 },
+            { coin: '%1h', rate: 283.55 },
+            { coin: '%24h', rate: 283.55 },
+            { coin: '%7d', rate: -3.55 }
+        ]
+    );
+
+    useEffect(() => {
+        
+        const interval = setInterval(() => {
+            getLiveCoinPrice();
+        }, 3000);
+
+        return () => {
+            clearInterval(interval);
+        };
+
+    }, []);
+
+    const getLiveCoinPrice = () => {
+
+        getCoinsRates((res) => {
+            const { status, data } = res;
+
+            if(status){
+                const { USD, EUR, GBP } = data;
+
+                rates[0]['rate'] = USD.PRICE;
+                rates[1]['rate'] = EUR.PRICE;
+                rates[2]['rate'] = GBP.PRICE;
+                rates[3]['rate'] = USD.CHANGEPCTHOUR;
+                rates[4]['rate'] = EUR.CHANGEPCT24HOUR;
+                rates[5]['rate'] = parseFloat(GBP.CHANGEPCTDAY) * 7;
+    
+                setRates(rates);
+                setLoading(false);
+
+            } else{
+                setLoading(false);
+                setRates(rates);
+            }
+        });
+
+    }
 
     return(
 
@@ -25,7 +77,8 @@ const FeatureSection = (props) => {
                             </div>
                             <Row className="mx-0 mt-2 p-0">
                                 {
-                                    exchangeRates.map((data, i) => (
+                                    loading ? <Spinner border="white" animation="border" size="md" className="mt-4" /> :
+                                    rates.length ? rates.map((data, i) => (
                                         <React.Fragment key={i}>
                                             <Col xs={4} sm={4} md={4} lg={4} xl={4}>
                                                 <div className="w-100 app-flex-column px-4 mb-4 align-items-center text-center justify-content-center" 
@@ -38,7 +91,7 @@ const FeatureSection = (props) => {
                                                 <div style={{ height: '1px' }} className="bg-black mx-4 "></div>
                                             </Col> }
                                         </React.Fragment>
-                                    ))
+                                    )) : null
                                 }
                                 </Row>
                         </div>
