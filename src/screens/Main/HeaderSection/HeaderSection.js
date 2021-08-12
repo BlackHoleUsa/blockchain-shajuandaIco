@@ -64,8 +64,8 @@ const HeaderSection = (props) => {
 
                 <div className="app-flex-column header-left-section pr-2 pt-4">
 
-                    <h6 className="paragraph-font" style={{fontSize: '80px'}}>With every Sunrise, invest wise with Cryptocurrency.</h6> <br />
-                    <p className="heading-font" style={{fontSize: '20px', marginRight: '10%'}}>Our token, SA RA, will give investors the opportunity to acquire and accumulate wealth through digital finance.</p>
+                    <h6 className="paragraph-font">With every Sunrise, invest wise with Cryptocurrency.</h6> <br />
+                    <p className="heading-font">Our token, SA RA, will give investors the opportunity to acquire and accumulate wealth through digital finance.</p>
                     <br />
                     <button className="gradient-apply border-0 paragraph-font" style={{width: '150px', height: '60px', fontSize: '25px', fontWeight: 'bold', letterSpacing: '1px'}}>
                         Get Started
