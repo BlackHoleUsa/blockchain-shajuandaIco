@@ -34,7 +34,7 @@ const ContactSection = (props) => {
                 </Col>
 
                 <Col xs={12} sm={12} md={6} lg={5} xl={{ span: 4, offset: 1 }}>
-                    <img alt="" src={Images.logoLarge} width="100%" style={{width: '400px',  marginLeft: '-20%'}}/>
+                    <img alt="" src={Images.logoLarge} width="80%"/>
                 </Col>
 
             </Row>

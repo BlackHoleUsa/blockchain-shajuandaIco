@@ -16,7 +16,7 @@ const RoadMapContain = () => {
             <FlexRow className="justify-content-around padding-flex-row flex-align-headings heading-font">
                 { 
                     timings.map((str, i) => (
-                        <span key={i} className="font-18px text-roadMap mb-2">
+                        <span key={i} className="font-16px text-roadMap mb-2">
                             {str}
                         </span>
                     ))
@@ -26,7 +26,7 @@ const RoadMapContain = () => {
             <FlexRow className="justify-content-around padding-flex-row flex-align-headings heading-font">
                 { 
                     launch.map((str, i) => (
-                        <span key={i} className="font-20px text-white font-weight-bold">
+                        <span key={i} className="font-16px text-white font-weight-bold">
                             {str}
                         </span>
                     ))
@@ -39,7 +39,7 @@ const RoadMapContain = () => {
             <FlexRow className="justify-content-around padding-flex-row d-lg-flex d-xl-flex d-md-flex d-sm-none remove-flex">
                 { 
                     launch.map((str, i) => (
-                        <span key={i} className="font-20px text-white text-center d-block text-road-map-margin heading-font"style={{marginLeft:'3%', marginRight:'3%'}} >
+                        <span key={i} className="font-16px text-white text-center d-block text-road-map-margin heading-font" >
                             Lorem ipsum is simply dummy text of the printings.
                         </span>
                     ))

@@ -112,7 +112,7 @@ const FeatureSection = (props) => {
                                     style={{ height: '380px', border: '3px solid black' }}>
                                         <img alt="" width="80px" src={data.image} />
                                         <h6 className="font-28px pt-4 pb-2 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>{data.heading}</h6>
-                                        <p className="font-20px heading-font" style={{marginLeft: '10%', marginRight: '10%'}}>{data.text}</p>
+                                        <p className="font-16px heading-font" style={{marginLeft: '5%', marginRight: '5%'}}>{data.text}</p>
                                     </div>
                                 </Col>
                             ))

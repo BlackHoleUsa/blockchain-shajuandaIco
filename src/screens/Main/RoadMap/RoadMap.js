@@ -14,7 +14,7 @@ const RoadMapSection = (props) => {
         <div className="app-flex-column w-100 py-5 text-white justify-content-center align-items-center" style={{marginTop: '100px'}}>
             
             <h6 className="font-36px mb-2 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>Roadmap To Success</h6>
-            <p className="font-20px d-block text-center heading-font" style={{marginTop: '1%'}}>
+            <p className="font-16px d-block text-center heading-font" style={{marginTop: '1%'}}>
             ICO seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver.
             </p>
 
@@ -33,7 +33,7 @@ const RoadMapSection = (props) => {
             <span className="font-20px mb-3 d-block text-center heading-font">
                 White-Founder-IT Consulting Expert-Entrepreneur Grambling State University
             </span>
-            <span className="font-20px text-center d-block heading-font" style={{marginLeft: '15%', marginRight: '15%', marginBottom: '100px'}}>
+            <span className="font-20px text-center d-block heading-font" style={{marginLeft: '10%', marginRight: '10%', marginBottom: '100px'}}>
                 Over 17 years of leadership and administrative experience in the IT industry.Managed large portfolio/programs/projects including testing (QA) and development and High Enterprise applications.Over nine years of implementing best practices and gathering requirements for Quality Assurance methodology for various software development projects, services, and products.Managed projects, teams, applications with multi-million-dollar budgets, P&L, SOW, RFP ($7-20 million).
             </span>
 
