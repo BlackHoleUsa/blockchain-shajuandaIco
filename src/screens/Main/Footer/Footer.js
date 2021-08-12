@@ -59,7 +59,7 @@ const Footer = (props) => {
                         <div className="footer-subscribe">
                             <input placeholder="Your Email..." value={email} onChange={(e) => setEmail(e.target.value)} 
                             className="footer-subscribe-input heading-font" style={{height: '60px', backgroundColor: 'darkGray', color: 'black', fontSize: '20px'}}/>
-                            <button className="gradient-apply border-0 footer-subscribe-btn paragraph-font" style={{height: '60px', fontSize: '25px'}}>
+                            <button className="ml-2 gradient-apply border-0 footer-subscribe-btn paragraph-font" style={{height: '60px', fontSize: '25px'}}>
                                 Submit
                             </button>
                         </div>    
