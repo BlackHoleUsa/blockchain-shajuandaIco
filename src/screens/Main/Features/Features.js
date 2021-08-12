@@ -44,9 +44,9 @@ const FeatureSection = (props) => {
                 rates[0]['rate'] = USD.PRICE;
                 rates[1]['rate'] = EUR.PRICE;
                 rates[2]['rate'] = GBP.PRICE;
-                rates[3]['rate'] = USD.CHANGEPCTHOUR;
-                rates[4]['rate'] = EUR.CHANGEPCT24HOUR;
-                rates[5]['rate'] = parseFloat(GBP.CHANGEPCTDAY) * 7;
+                rates[3]['rate'] = parseFloat(USD.CHANGEPCTHOUR).toFixed(2);
+                rates[4]['rate'] = parseFloat(EUR.CHANGEPCT24HOUR).toFixed(2);
+                rates[5]['rate'] = (parseFloat(GBP.CHANGEPCTDAY) * 7).toFixed(2);
     
                 setRates(rates);
                 setLoading(false);
