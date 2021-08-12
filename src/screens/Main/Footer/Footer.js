@@ -22,7 +22,7 @@ const Footer = (props) => {
                 <Col xs={12} sm={6} md={6} lg={4} xl={4}>
                     <div className="w-100 app-flex-column">
                         <img alt="" src={Images.logo} width="120px" />
-                        <span className="font-20px my-3 heading-font" style={{marginRight: '10%'}}>
+                        <span className="font-18px my-3 heading-font" style={{marginRight: '10%'}}>
                             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium cia deserunt mollitia animi.
                         </span>
                         <span className="font-18px mt-4 heading-font">&copy; 2021 SARA ALL RIGHT RESERVED.</span>
@@ -33,7 +33,7 @@ const Footer = (props) => {
 
                 <Col xs={12} sm={6} md={6} lg={2} xl={2}>
                     <div className="w-100 app-flex-column mt-2">
-                        <h6 className="font-28px mb-3 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>PRIVACY & TOS</h6>
+                        <h6 className="font-20px mb-3 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>PRIVACY & TOS</h6>
                         { footerLinks.slice(0, 5).map((link, i) => (
                             <span className="font-20px mb-2 heading-font" key={i}>{link}</span>
                         )) }
@@ -42,7 +42,7 @@ const Footer = (props) => {
 
                 <Col xs={12} sm={6} md={6} lg={2} xl={2}>
                     <div className="w-100 app-flex-column mt-2">
-                        <h6 className="font-28px mb-3 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>IMPORTANT LINK</h6>
+                        <h6 className="font-20px mb-3 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>IMPORTANT LINK</h6>
                         { footerLinks.slice(5, 10).map((link, i) => (
                             <span className="font-20px mb-2 heading-font" key={i}>{link}</span>
                         )) }
@@ -51,8 +51,8 @@ const Footer = (props) => {
 
                 <Col xs={12} sm={6} md={6} lg={4} xl={4}>
                     <div className="w-100 app-flex-column mt-2">
-                        <h6 className="font-28px mb-3 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>SUBSCRIBE WITH US</h6>
-                        <span className="font-20px mb-2 heading-font" style={{marginRight: '10%'}}>
+                        <h6 className="font-20px mb-3 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>SUBSCRIBE WITH US</h6>
+                        <span className="font-18px mb-2 heading-font" style={{marginRight: '10%'}}>
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
                         </span>
                         
