@@ -4,10 +4,29 @@ import { Row, Col } from 'react-bootstrap';
 import { Images } from '../../../Assets/Images';
 import { footerLinks } from '../../../Assets/Data';
 import SocialMedia from './SocialMedia';
+import { validateEmail } from '../../../utilities/CommonMethods';
 
 const Footer = (props) => {
 
-    const [email, setEmail] = useState('')
+    const [email, setEmail] = useState('');
+
+    const goToLink = ({ link, value, id }) => {
+        if(id > 5 && id < 9){
+            props.gotoSection({ link, value });
+        }
+    }
+
+    const submitEmail = () => {
+        if(!email){
+            alert('Please write your email.');
+        } 
+        else if(!validateEmail(email)){
+            alert('Please enter your valid email.');
+        } 
+        else{
+
+        }
+    }
 
     return(
 
@@ -35,7 +54,9 @@ const Footer = (props) => {
                     <div className="w-100 app-flex-column mt-2">
                         <h6 className="font-20px mb-3 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>PRIVACY & TOS</h6>
                         { footerLinks.slice(0, 5).map((link, i) => (
-                            <span className="font-20px mb-2 heading-font" key={i}>{link}</span>
+                            <span className="font-20px mb-2 heading-font cursor-pointer-sort" 
+                                key={i} onClick={() => goToLink(link)}
+                            >{link?.text}</span>
                         )) }
                     </div>
                 </Col>
@@ -44,7 +65,9 @@ const Footer = (props) => {
                     <div className="w-100 app-flex-column mt-2">
                         <h6 className="font-20px mb-3 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>IMPORTANT LINK</h6>
                         { footerLinks.slice(5, 10).map((link, i) => (
-                            <span className="font-20px mb-2 heading-font" key={i}>{link}</span>
+                            <span className="font-20px mb-2 heading-font cursor-pointer-sort" 
+                                key={i} onClick={() => goToLink(link)}
+                            >{link?.text}</span>
                         )) }
                     </div>
                 </Col>
@@ -59,9 +82,13 @@ const Footer = (props) => {
                         <div className="footer-subscribe">
                             <input placeholder="Your Email..." value={email} onChange={(e) => setEmail(e.target.value)} 
                             className="footer-subscribe-input heading-font" style={{height: '60px', backgroundColor: 'darkGray', color: 'black', fontSize: '20px'}}/>
-                            <button className="ml-2 gradient-apply border-0 footer-subscribe-btn paragraph-font" style={{height: '60px', fontSize: '25px'}}>
+
+                            <button
+                                onClick={submitEmail} 
+                                className="ml-2 gradient-apply border-0 footer-subscribe-btn paragraph-font" style={{height: '60px', fontSize: '25px'}}>
                                 Submit
                             </button>
+
                         </div>    
 
                     </div>

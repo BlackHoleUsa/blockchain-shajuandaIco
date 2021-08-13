@@ -32,7 +32,14 @@ export const questions = [
 ];
 
 export const footerLinks = [
-    "Advertiser Agreement", "Acceptable Use Policy", 
-    "Privacy Policy", "Technology Privacy", "Developer Agreement", "Home", "About Us", 
-    "Roadmap", "Blog", "Partner"
+    { id: 1, link: '', text: 'Advertiser Agreement' },
+    { id: 2, link: '', text: 'Acceptable Use Policy' },
+    { id: 3, link: '', text: 'Privacy Policy' },
+    { id: 4, link: '', text: 'Technology Privacy' },
+    { id: 5, link: '', text: 'Developer Agreement' },
+    { id: 6, link: 'home-section', text: 'Home', value: 'home' },
+    { id: 7, link: 'about-section', text: 'About Us', value: 'about' },
+    { id: 8, link: 'roadmap-section', text: 'Roadmap', value: 'roadmap' },
+    { id: 9, link: '', text: 'Blog' },
+    { id: 10, link: '', text: 'Partner' }
 ];

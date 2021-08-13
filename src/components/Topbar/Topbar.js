@@ -35,7 +35,7 @@ const Topbar = (props) => {
         { id: 3, value: 'Team', sectionId: 'team-section' },
         { id: 4, value: 'Token', sectionId: 'token-section' },
         { id: 5, value: 'Roadmap', sectionId: 'roadmap-section' },
-        { id: 6, value: 'FAQs', sectionId: 'faq-section' },
+        { id: 6, value: "FAQ's", sectionId: 'faq-section' },
         { id: 7, value: 'Contact', sectionId: 'contact-section' }
     ];
 
