@@ -39,7 +39,7 @@ export const footerLinks = [
     { id: 5, link: '', text: 'Developer Agreement' },
     { id: 6, link: 'home-section', text: 'Home', value: 'home' },
     { id: 7, link: 'about-section', text: 'About Us', value: 'about' },
-    { id: 8, link: 'roadmap-section', text: 'Roadmap', value: 'roadmap' },
-    { id: 9, link: '', text: 'Blog' },
-    { id: 10, link: '', text: 'Partner' }
+    { id: 8, link: 'roadmap-section', text: 'Roadmap', value: 'roadmap' }
+    // { id: 9, link: '', text: 'Blog' },
+    // { id: 10, link: '', text: 'Partner' }
 ];
