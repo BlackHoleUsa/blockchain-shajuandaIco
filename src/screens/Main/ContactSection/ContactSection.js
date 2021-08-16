@@ -4,6 +4,7 @@ import { Row, Col } from 'react-bootstrap';
 import { Images } from '../../../Assets/Images';
 import { questions, teamMembers } from '../../../Assets/Data';
 import CustomAccordian from '../../../components/Accordian/Accordian';
+import { validateEmail } from '../../../utilities/CommonMethods';
 
 const ContactSection = (props) => {
 
@@ -13,9 +14,25 @@ const ContactSection = (props) => {
     const [email, setEmail] = useState('');
     const [msg, setMsg] = useState('');
 
+    const submitMessage = () => {
+        if(!email || !name || !msg){
+            alert('Please fill all fields.');
+        } 
+        else if(!validateEmail(email)){
+            alert('Please enter your valid email.');
+        } 
+        else if(msg.length < 15){
+            alert('Message should be greater than 15 characters.');
+        } 
+        else{
+            
+        }
+    }
+
     return(
 
-        <div className="app-flex-column w-100 py-5 text-white text-center justify-content-center align-items-center contact-section" style={{marginTop: '100px'}}>
+        <div className="app-flex-column w-100 py-5 text-white text-center justify-content-center align-items-center contact-section" style={{marginTop: '100px'}} 
+        id="faq-section">
             
             <h6 className="font-36px mb-2 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>Frequently Asked Question</h6>
             <p className="font-20px heading-font" style={{marginTop: '1%'}}>
@@ -51,7 +68,9 @@ const ContactSection = (props) => {
                  placeholder="Message" value={msg} className="info-field heading-font" onChange={(e) => setMsg(e.target.value)} style={{border: 'solid 5px rgb(20, 20, 20)', fontSize: '23px'}}>
                 </textarea>
 
-                <button className="gradient-apply connect-wallet border-0 mt-3 mb-5 paragraph-font" style={{width: '170px', height: '60px', fontSize: '25px', color: 'white'}}>
+                <button
+                    onClick={submitMessage}  
+                    className="gradient-apply connect-wallet border-0 mt-3 mb-5 paragraph-font" style={{width: '170px', height: '60px', fontSize: '25px', color: 'white'}}>
                     Submit
                 </button>
             </div>

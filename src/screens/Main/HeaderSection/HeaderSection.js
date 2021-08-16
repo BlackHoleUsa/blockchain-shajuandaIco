@@ -3,6 +3,7 @@ import "@fontsource/oswald";
 import './HeaderSection.css';
 import { Row, Col } from 'react-bootstrap'; 
 import BorderBox from '../../../components/BorderBox/BorderBox';
+import { goToSection } from '../../../utilities/CommonMethods';
 
 const HeaderSection = (props) => {
     
@@ -56,6 +57,10 @@ const HeaderSection = (props) => {
         { time: sec, value: 'Seconds' }
     ];
 
+    const started = () => {
+        goToSection('about-section', false);
+    }
+
     return(
 
         <Row className="m-0 p-0">
@@ -67,9 +72,15 @@ const HeaderSection = (props) => {
                     <h6 className="paragraph-font">With every Sunrise, invest wise with Cryptocurrency.</h6> <br />
                     <p className="heading-font">Our token, SA RA, will give investors the opportunity to acquire and accumulate wealth through digital finance.</p>
                     <br />
-                    <button className="gradient-apply border-0 paragraph-font" style={{width: '150px', height: '60px', fontSize: '25px', fontWeight: 'bold', letterSpacing: '1px'}}>
+                    
+                    <button className="gradient-apply border-0 paragraph-font cursor-pointer-sort" 
+                        onClick={started}
+                        style={{ width: '150px', height: '60px', fontSize: '25px', 
+                        fontWeight: 'bold', letterSpacing: '1px', zIndex: 12 }}
+                    >
                         Get Started
                     </button>
+                    
                     <br />
                     <br />
                 </div>

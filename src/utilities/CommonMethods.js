@@ -9,38 +9,13 @@ export const comaSeparateNames = (arr) => {
         : [];
 };
 
-export const filterRecordByName = (arr, arrCopy, value) => {
-    if(value.length === 0){
-        return arrCopy;
-    } else{
-        if(arr?.length){
-            return arr?.filter((item) => 
-                item?.firstName ? item.firstName .toLowerCase().indexOf(value.toLowerCase()) !== -1 :
-                item?.fullName ? item.fullName .toLowerCase().indexOf(value.toLowerCase()) !== -1 :
-                item?.lastName ? item.lastName .toLowerCase().indexOf(value.toLowerCase()) !== -1 :
-                item?.name ? item.name .toLowerCase().indexOf(value.toLowerCase()) !== -1 :
-                item?.businessName ? item.businessName .toLowerCase().indexOf(value.toLowerCase()) !== -1 
-                : item
-            );
-        }
-    }
+export const goToSection = (id, start) => {
+    document.getElementById(id)
+    .scrollIntoView({ behavior: "smooth", block: start ? "start" : "end", inline: start ? "start" : "end" });
 }
 
-export const uploadFirebaseImage = async (storage, image, callback) => {
+export const validateEmail = (value) => {
+    const pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
 
-    let name = image?.name ? image.name : 'image-name';
-
-    const uploadTask = storage.ref(`images/${name}`).put(image);
-    uploadTask.on('state_changed', 
-    (snapShot) => {
-        console.log(snapShot)
-    }, (err) => {
-            console.log(err)
-    }, async () => {
-    
-        const url = await storage.ref('images').child(name).getDownloadURL();
-        callback(url);
-        
-    });
-
-}
+    return pattern.test(value);
+};

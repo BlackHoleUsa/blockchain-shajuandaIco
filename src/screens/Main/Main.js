@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Main.css';
 import Topbar from '../../components/Topbar/Topbar';
+import { goToSection } from '../../utilities/CommonMethods';
 import { Images } from '../../Assets/Images';
 import HeaderSection from './HeaderSection/HeaderSection';
 import AboutSection from './AboutSection/AboutSection';
@@ -9,6 +10,7 @@ import TokenSaleSection from './TokenSale/TokenSale';
 import RoadMapSection from './RoadMap/RoadMap';
 import ContactSection from './ContactSection/ContactSection';
 import Footer from './Footer/Footer';
+
 
 const Main = () => {
 
@@ -33,8 +35,14 @@ const Main = () => {
         { id: 6, component: <ContactSection />, className: 'main-container pt-0 bg-lightPrimary', 
             componentState: 'team', sectionId: '' },
 
-        { id: 7, component: <Footer />, className: 'main-container pt-0 bg-primary', 
-            componentState: 'footer', sectionId: 'faq-section' }
+        { id: 7, component: <Footer 
+                gotoSection={({ link, value }) => {
+                    setCurrentState(value);
+                    goToSection(link, true);
+                }} 
+            />, 
+            className: 'main-container pt-0 bg-primary', 
+            componentState: 'footer', sectionId: '' }
     ];
 
     useEffect(() => {
@@ -45,11 +53,6 @@ const Main = () => {
         }
 
     }, []);
-
-    const goToSection = (sectionRef) => {
-        document.getElementById(sectionRef).scrollIntoView({ behavior: 'smooth' });
-        console.log(document.getElementById(sectionRef).offsetTop);
-    }
 
     const onScroll = (e) => {
         // console.log(e);
@@ -66,7 +69,7 @@ const Main = () => {
                 currentState={currentState} 
                 clickLink={({ value, sectionId }) => {
                     setCurrentState(value);
-                    goToSection(sectionId);
+                    goToSection(sectionId, true);
                 }}
             />
 
