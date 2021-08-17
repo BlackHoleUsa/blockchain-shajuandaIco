@@ -102,7 +102,7 @@ const FeatureSection = (props) => {
                 <div className="w-100 app-flex-column align-items-center justify-content-center feature-section text-white" style={{marginTop: '100px'}}>
 
                     <h6 className="font-36px mb-1 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>Features</h6>
-                    <p className="font-20px d-block text-center features-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <p className="font-20px d-block text-center features-p">Features of SA RA Token which makes it better than others.</p>
 
                     <Row className="mx-0 mt-5 p-0">
                         {
@@ -112,7 +112,7 @@ const FeatureSection = (props) => {
                                     style={{ height: '380px', border: '3px solid black' }}>
                                         <img alt="" width="80px" src={data.image} />
                                         <h6 className="font-28px pt-4 pb-2 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>{data.heading}</h6>
-                                        <p className="font-16px heading-font" style={{marginLeft: '5%', marginRight: '5%'}}>{data.text}</p>
+                                        <p className="font-14px heading-font">{data.text}</p>
                                     </div>
                                 </Col>
                             ))

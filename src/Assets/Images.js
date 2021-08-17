@@ -7,6 +7,7 @@ export const Images = {
 
     bgShapeCrop: require('./images/bg-shape-crop.png').default,
     shapeLogo: require('./images/shape-logo.png').default,
+    tokenAllocation: require('./images/shapeLogo.png').default,
     bgHeader: require('./images/bg-header.png').default,
     aboutImage: require('./images/about-img.png').default,
 
@@ -24,7 +25,8 @@ export const Images = {
 
     // images
     shajuanda: require('./images/shajuanda-pic.png').default,
-
+    roadMap: require('./images/roadmapD.png').default,
+    roadMapM: require('./images/roadmapM.png').default,
     teamMembers: [
         require('./images/team-mem1.png').default,
         require('./images/team-mem2.png').default,

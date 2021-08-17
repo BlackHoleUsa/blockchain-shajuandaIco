@@ -14,11 +14,13 @@ const RoadMapSection = (props) => {
         <div className="app-flex-column w-100 py-5 text-white justify-content-center align-items-center" style={{marginTop: '100px'}}>
             
             <h6 className="font-36px mb-2 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>Roadmap To Success</h6>
-            <p className="font-16px d-block text-center heading-font" style={{marginTop: '1%'}}>
-            ICO seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver.
+            <p className="font-20px d-block text-center heading-font" style={{marginTop: '1%'}}>
+            When you have the token workflow defined, you can start working on the ‘numbers’ for your ICO.
             </p>
 
-            <RoadMapContain />
+            <div className="roadmap-img">
+
+            </div>
             
             <h6 className="font-36px mb-2 mt-5 pt-3 paragraph-font" id="team-section" style={{fontWeight: 'bold'}}>Our Awesome Team</h6>
             <p className="font-20px d-block text-center heading-font" style={{marginTop: '1%'}}>

@@ -36,11 +36,11 @@ const ContactSection = (props) => {
             
             <h6 className="font-36px mb-2 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>Frequently Asked Question</h6>
             <p className="font-20px heading-font" style={{marginTop: '1%'}}>
-                ICO seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver.
+                Most asking questions from User Side are answered by our Team
             </p>
             <Row className="mx-0 mt-5 p-0 w-100">
 
-                <Col xs={12} sm={12} md={6} lg={7} xl={{ span: 6, offset: 1 }} style={{marginTop: '3%'}}>
+                <Col xs={12} sm={12} md={6} lg={7} xl={{ span: 6, offset: 1 }} style={{marginTop: '7%'}}>
                     
                     {
                         questions.map((ques, i) => (

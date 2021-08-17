@@ -1,0 +1,122 @@
+.roadmap-img{
+    background: url('../../../Assets/images/roadmapD.png');
+        background-repeat: no-repeat;
+        width:100%;
+        height:200px;
+        margin-top:10%;
+        margin-left:10%;
+        background-size: 1700px 200px;
+}
+@media only screen and (max-width: 2724px) {
+    .roadmap-img{
+        background: url('../../../Assets/images/roadmapD.png');
+        background-repeat: no-repeat;
+        width:100%;
+        height:300px;
+        margin-top:10%;
+        background-size: 2200px 300px;
+    }
+
+}
+@media only screen and (max-width: 2424px) {
+    .roadmap-img{
+        background: url('../../../Assets/images/roadmapD.png');
+        background-repeat: no-repeat;
+        width:100%;
+        height:300px;
+        margin-top:10%;
+        background-size: 2000px 300px;
+    }
+
+}
+@media only screen and (max-width: 2324px) {
+    .roadmap-img{
+        background: url('../../../Assets/images/roadmapD.png');
+        background-repeat: no-repeat;
+        width:100%;
+        height:300px;
+        margin-top:10%;
+        background-size: 1800px 300px;
+    }
+
+}
+@media only screen and (max-width: 2024px) {
+    .roadmap-img{
+        background: url('../../../Assets/images/roadmapD.png');
+        background-repeat: no-repeat;
+        width:100%;
+        height:200px;
+        margin-top:10%;
+        background-size: 1500px 200px;
+    }
+
+}
+@media only screen and (max-width: 1714px) {
+    .roadmap-img{
+        background: url('../../../Assets/images/roadmapD.png');
+        background-repeat: no-repeat;
+        width:100%;
+        height:200px;
+        margin-top:10%;
+        background-size: 1300px 200px;
+    }
+
+}
+@media only screen and (max-width: 1524px) {
+    .roadmap-img{
+        background: url('../../../Assets/images/roadmapD.png');
+        background-repeat: no-repeat;
+        width:100%;
+        height:200px;
+        margin-top:10%;
+        background-size: 900px 200px;
+    }
+
+}
+@media only screen and (max-width: 1124px) {
+    .roadmap-img{
+        background: url('../../../Assets/images/roadmapD.png');
+        background-repeat: no-repeat;
+        width:100%;
+        height:200px;
+        margin-top:10%;
+        background-size: 800px 150px;
+        margin-left:15%;
+    }
+
+}
+@media only screen and (max-width: 932px) {
+    .roadmap-img{
+        background: url('../../../Assets/images/roadmapD.png');
+        background-repeat: no-repeat;
+        width:100%;
+        height:200px;
+        margin-top:10%;
+        background-size: 600px 150px;
+        margin-left:15%;
+    }
+
+}
+@media only screen and (max-width: 768px) {
+    .roadmap-img{
+        background: url('../../../Assets/images/roadmapM.png');
+        background-repeat: no-repeat;
+        width:100%;
+        height:1150px;
+        margin-top:10%;
+        background-size: 300px 1100px;
+        margin-left:15%;
+    }
+
+}
+@media only screen and (max-width:587px) {
+    .roadmap-img{
+        background: url('../../../Assets/images/roadmapM.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width:100%;
+        height:1150px;
+        background-size: 250px 1100px;
+    }
+
+}
