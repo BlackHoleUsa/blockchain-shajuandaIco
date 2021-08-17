@@ -18,9 +18,7 @@ const RoadMapSection = (props) => {
             When you have the token workflow defined, you can start working on the ‘numbers’ for your ICO.
             </p>
 
-            <div className="roadmap-img">
-
-            </div>
+            <div className="roadmap-img"></div>
             
             <h6 className="font-36px mb-2 mt-5 pt-3 paragraph-font" id="team-section" style={{fontWeight: 'bold'}}>Our Awesome Team</h6>
             <p className="font-20px d-block text-center heading-font" style={{marginTop: '1%'}}>
