@@ -10,9 +10,9 @@ const Dashboard = () => {
         { heading: 'ICO Start Date', date: 'Jun 2, 2021' },
         { heading: 'ICO End Date', date: 'Oct 4, 2021' },
         { heading: 'Total Tokens ETH', date: '3.0611162 DASH' },
-        { heading: 'ICO Start Date', date: '0xB3775fB83F7D1' },
+        { heading: 'Token Holdings', date: '0xB3775fB83F7D1' },
         { heading: 'Convert Price', date: '$800.056' },
-        { heading: 'Marget Value', date: '$780.00' },
+        { heading: 'Market Value', date: '$780.00' },
         { heading: 'Remaining Token', date: '25 ETH' }
     ];
 
