@@ -40,8 +40,20 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
+    .dashboard-conis {
+        width: 49%;
+    }
+    .dashboard-sidebar{
+        display: none;
+    }
+}
+@media screen and (max-width: 552px) {
     .dashboard-conis {
         width: 100%;
+        text-align: center;
+    }
+    .dashboard-sidebar{
+        display: none;
     }
 }

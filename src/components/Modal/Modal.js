@@ -45,7 +45,7 @@ const CustomModal = (props) => {
                     SALE_CONTRACT_ABI,
                     signer
                 );
-    
+
                 const weightAmount = Web3.utils.toWei(convertedValue.toString(), 'ether');
                 
                 await contract.buyTokens(state?.address[0], { value: weightAmount })

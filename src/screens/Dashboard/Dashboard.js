@@ -16,12 +16,12 @@ const Dashboard = () => {
         { heading: 'Remaining Token', date: '25 ETH' }
     ];
 
-    return(
+    return (
 
         <div className="w-100 h-100 app-flex-row align-align-items-start justify-content-start">
-            
-            <Sidebar />
-
+            <div className="dashboard-sidebar">
+                <Sidebar />
+            </div>
             <div className="w-100 h-100 bg-primary app-flex-column" style={{ padding: '50px 50px 10px 50px' }}>
 
                 <span className="dashboard-heading-large">Dashboard</span>
@@ -33,14 +33,14 @@ const Dashboard = () => {
                 <div className="mx-0 mt-5 w-100 p-0 text-white" style={{ height: '80%', overflowY: 'auto' }}>
 
                     <div className="app-flex-row w-100 flex-wrap align-items-center justify-content-between">
-                    {
-                        data?.map((coins, index) => (
-                            <div className="dashboard-conis mb-4" key={index}>
-                                <span>{coins.heading}</span>
-                                <span>{coins.date}</span>
-                            </div>
-                        ))
-                    }
+                        {
+                            data?.map((coins, index) => (
+                                <div className="dashboard-conis mb-4" key={index}>
+                                    <span>{coins.heading}</span>
+                                    <span>{coins.date}</span>
+                                </div>
+                            ))
+                        }
                     </div>
 
                 </div>
