@@ -7,7 +7,7 @@ export const Avatar = ({ src, name, large, medium }) => {
     const [ showError, setShowError ] = useState(false);
 
     const style = {
-        width: large ? '100px' : medium ? '50px' : '40px',
+        width: large ? '150px' : medium ? '100px' : '70px',
         // height: large ? '100px' : medium ? '70px' : '50px',
         // borderRadius: '50%',
         objectFit: 'cover'

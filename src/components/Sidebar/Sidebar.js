@@ -15,7 +15,7 @@ const Sidebar = () => {
                 <Avatar large name="logo" src={ Images.logo } />
             </div>
 
-            <span className="text-white mx-4 py-3">Menu</span>
+            <span className="text-white mx-4 py-3 menu">Menu</span>
 
             <div className="app-flex-column">
                 {

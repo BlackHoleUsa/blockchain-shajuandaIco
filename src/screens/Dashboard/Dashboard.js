@@ -39,7 +39,7 @@ const Dashboard = () => {
                         {
                             data?.map((coins, index) => (
                                 <div className="dashboard-conis mb-4" key={index}>
-                                    <span>{coins.heading}</span>
+                                    <span className="paragraph-font">{coins.heading}</span>
                                     <span>{coins.date}</span>
                                 </div>
                             ))

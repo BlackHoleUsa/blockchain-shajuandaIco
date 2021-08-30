@@ -10,8 +10,8 @@ export const SidebarItem = ({ nav }) => {
 
             <div className="app-flex-row align-items-center sidebar-padding px-4 py-3">
 
-                <span className="mr-2 text-yellow">{nav.icon}</span>
-                <p>{nav.item}</p>
+                <span className="mr-2 text-yellow" style={{fontSize: '18px'}}>{nav.icon}</span>
+                <p style={{fontSize: '18px'}}>{nav.item}</p>
 
             </div>
 
