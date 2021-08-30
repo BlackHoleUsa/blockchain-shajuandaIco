@@ -1,12 +1,14 @@
 .dashboard-heading-large{
     color: var(--white);
     font-size: 30px;
+
 }
 
 .dashboard-heading-small{
     color: var(--white);
     opacity: 50%;
     font-size: 18px;
+    
 }
 
 .dashboard-conis{
@@ -29,12 +31,15 @@
 }
 
 .dashboard-conis span:nth-child(2){
-    font-size: 18px;
+    font-size: 16px;
     margin: 0px !important;
     padding: 0 !important;
 }
+.small-screen-logo{
+    display: none;
+}
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 992px) and (max-width: 1199px) {
     .dashboard-conis {
         width: 49%;
     }
@@ -43,17 +48,70 @@
 @media screen and (max-width: 991px) {
     .dashboard-conis {
         width: 49%;
+        height:80px;
     }
     .dashboard-sidebar{
         display: none;
     }
+    .dashboard-heading-large{
+        text-align: center;
+    }
+    .dashboard-heading-small{
+        text-align: center;
+    }
+    .bg-line{
+        margin:0px auto;
+    }
+    .small-screen-logo{
+        display: initial;
+        width:100%;
+        text-align: center;
+    }
+    .small-screen-logo img{
+        margin-right:5%;
+        width:70px;
+    }
+    .dashboard-conis span:nth-child(1){
+        font-size: 22px;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .dashboard-conis span:nth-child(2){
+        font-size: 16px;
+        margin: 0px !important;
+        padding: 0 !important;
+    }
+    .dashboard-heading-large{
+        font-size: 25px;
+    }
 }
-@media screen and (max-width: 552px) {
+@media screen and (max-width: 575px) {
     .dashboard-conis {
         width: 100%;
         text-align: center;
+        height: 70px;
     }
     .dashboard-sidebar{
         display: none;
+    }
+    .dashboard-conis span:nth-child(1){
+        font-size: 18px;
+        
+    }
+    
+    .dashboard-conis span:nth-child(2){
+        font-size: 14px;
+        
+    }
+    .dashboard-heading-large{
+        font-size: 20px;
+    }
+    .small-screen-logo img{
+        margin-right:12%;
+        width:50px;
+    }
+    .dashboard-heading-small{
+        font-size: 14px;
     }
 }
