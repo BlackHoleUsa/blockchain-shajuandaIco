@@ -53,9 +53,10 @@ const RoadMapSection = (props) => {
                 }
             </Row>
 
-            <button className="gradient-apply connect-wallet border-0 my-5 paragraph-font" style={{width:'200px', height: '60px', fontSize: '25px', color: 'white'}}>
+           {/* <button className="gradient-apply connect-wallet border-0 my-5 paragraph-font" style={{width:'200px', height: '60px', fontSize: '25px', color: 'white'}}>
                 See All
             </button>
+            */}
 
         </div>
 

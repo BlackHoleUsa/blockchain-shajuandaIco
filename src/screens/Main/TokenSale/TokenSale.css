@@ -11,10 +11,28 @@
 .token-section .get-content-text{
     width: 200px;
 }
-
+.token-section .left-sec{
+    width:50%;
+    text-align: left;
+    margin-bottom:0px;
+}
+.token-section .evenly-content{
+    margin-top:1%;
+}
+.token-section .evenly-content .evenly-content-img{
+    width: 50% !important;
+}
 @media screen and (min-width: 768px) and (max-width: 1199px){
     .token-section .evenly-content .evenly-content-img{
-        width: 40% !important;
+        width: 50% !important;
+    }
+    .token-section .left-sec{
+        width:50%;
+        text-align: left;
+        margin-bottom:0px;
+    }
+    .token-section .left-sec h3{
+        font-size: 18px;
     }
 }
 
@@ -32,6 +50,14 @@
 
     .token-section .get-content-text{
         width: 100%;
+    }
+    .token-section .left-sec{
+        width:100%;
+        text-align: left;
+        margin-bottom:0px;
+    }
+    .token-section .left-sec h3{
+        font-size: 14px;
     }
 }
 .token-allocation{

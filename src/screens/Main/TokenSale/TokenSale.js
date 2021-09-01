@@ -20,7 +20,11 @@ const TokenSaleSection = (props) => {
                         <h6 className={`font-28px my-5 pt-2 text-uppercase paragraph-font`}>
                             { i === 0 ? 'token' : 'funds' } ALLOCATION
                         </h6>
-                        
+                        <spam className="left-sec">
+                           <h3>35% Sa Ra</h3>
+                           <h3>5% Investors</h3>
+                           <h3>5% Developers</h3>
+                        </spam>
                         <div className="evenly-content token-allocation">
                             <img alt="" src={Images.tokenAllocation} className="evenly-content-img" />
                             

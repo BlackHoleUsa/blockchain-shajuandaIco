@@ -38,19 +38,19 @@ const Footer = (props) => {
 
             <Row className="m-0 p-0">
 
-                <Col xs={12} sm={6} md={6} lg={4} xl={4}>
+                <Col xs={12} sm={6} md={5} lg={5} xl={5}>
                     <div className="w-100 app-flex-column">
                         <img alt="" src={Images.logo} width="120px" />
-                        <span className="font-18px my-3 heading-font" style={{marginRight: '10%'}}>
+                        {/*<span className="font-18px my-3 heading-font" style={{marginRight: '10%'}}>
                             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium cia deserunt mollitia animi.
-                        </span>
+    </span>*/}
                         <span className="font-18px mt-4 heading-font">&copy; 2021 SARA ALL RIGHTS RESERVED.</span>
                     </div>
                 </Col>
 
                 
 
-                <Col xs={12} sm={6} md={6} lg={2} xl={2}>
+               {/*<Col xs={12} sm={6} md={6} lg={2} xl={2}>
                     <div className="w-100 app-flex-column mt-2">
                         <h6 className="font-20px mb-3 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>PRIVACY & TOS</h6>
                         { footerLinks.slice(0, 5).map((link, i) => (
@@ -60,8 +60,9 @@ const Footer = (props) => {
                         )) }
                     </div>
                 </Col>
+                        */}
 
-                <Col xs={12} sm={6} md={6} lg={2} xl={2}>
+                <Col xs={12} sm={6} md={3} lg={3} xl={3}>
                     <div className="w-100 app-flex-column mt-2">
                         <h6 className="font-20px mb-3 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>IMPORTANT LINK</h6>
                         { footerLinks.slice(5, 10).map((link, i) => (
@@ -72,7 +73,7 @@ const Footer = (props) => {
                     </div>
                 </Col>
 
-                <Col xs={12} sm={6} md={6} lg={4} xl={4}>
+                <Col xs={12} sm={12} md={4} lg={4} xl={4}>
                     <div className="w-100 app-flex-column mt-2">
                         <h6 className="font-20px mb-3 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>SUBSCRIBE WITH US</h6>
                         <span className="font-18px mb-2 heading-font" style={{marginRight: '10%'}}>

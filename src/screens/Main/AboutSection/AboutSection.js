@@ -24,9 +24,10 @@ const AboutSection = (props) => {
                             <span className="w-100 pl-3 text-justify heading-font">
                             Our company is willing to give all people in the universe to have a chance to access financial assistance that will enable them to acquire wealth. Through the rich blockchaim technology and cryptocurrency, our investors will have chances of accessing digital finances which will help them to invest and build an enabling economy to all people. We are committed to ensure that individuals have gained their financial freedom which is not provided by the traditional financial systems rather, through the current digital financing.
                             </span>
-                            <button className="ml-3 gradient-apply border-0 connect-wallet text-white mt-3 paragraph-font" >
+                            {/*<button className="ml-3 gradient-apply border-0 connect-wallet text-white mt-3 paragraph-font" >
                                 Know About Ourself
                             </button>
+    */}
                         </BorderBox>
                     </div>
                 </Col>
