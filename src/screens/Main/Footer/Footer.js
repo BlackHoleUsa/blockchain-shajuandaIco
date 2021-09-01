@@ -40,7 +40,7 @@ const Footer = (props) => {
 
                 <Col xs={12} sm={6} md={5} lg={5} xl={5}>
                     <div className="w-100 app-flex-column">
-                        <img alt="" src={Images.logo} width="120px" />
+                        <img alt="" src={Images.logo} width="130px" />
                         {/*<span className="font-18px my-3 heading-font" style={{marginRight: '10%'}}>
                             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium cia deserunt mollitia animi.
     </span>*/}

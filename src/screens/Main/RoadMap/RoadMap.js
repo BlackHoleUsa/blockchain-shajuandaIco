@@ -15,7 +15,7 @@ const RoadMapSection = (props) => {
             
             <h6 className="font-36px mb-2 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>Roadmap To Success</h6>
             <p className="font-20px d-block text-center heading-font" style={{marginTop: '1%'}}>
-            When you have the token workflow defined, you can start working on the ‘numbers’ for your ICO.
+            ICO seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver.
             </p>
 
             <div className="roadmap-img"></div>
