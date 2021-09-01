@@ -111,7 +111,7 @@ const FeatureSection = (props) => {
                                     <div className="w-100 app-flex-column px-4 mb-4 align-items-center text-center justify-content-center" 
                                     style={{ height: '380px', border: '3px solid black' }}>
                                         <img alt="" width="80px" src={data.image} />
-                                        <h6 className="font-28px pt-4 pb-2 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>{data.heading}</h6>
+                                        <h6 className="font-20px pt-4 pb-2 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>{data.heading}</h6>
                                         <p className="font-14px heading-font">{data.text}</p>
                                     </div>
                                 </Col>

@@ -75,7 +75,7 @@ const HeaderSection = (props) => {
                     
                     <button className="gradient-apply border-0 paragraph-font cursor-pointer-sort" 
                         onClick={started}
-                        style={{ width: '150px', height: '60px', fontSize: '25px', 
+                        style={{ width: '120px', height: '50px', fontSize: '20px', 
                         fontWeight: 'bold', letterSpacing: '1px', zIndex: 12 }}
                     >
                         Get Started
