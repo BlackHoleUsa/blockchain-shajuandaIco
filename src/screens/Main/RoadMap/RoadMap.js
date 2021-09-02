@@ -14,16 +14,14 @@ const RoadMapSection = (props) => {
         <div className="app-flex-column w-100 py-5 text-white justify-content-center align-items-center" style={{marginTop: '100px'}}>
             
             <h6 className="font-36px mb-2 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>Roadmap To Success</h6>
-            <p className="font-20px d-block text-center heading-font" style={{marginTop: '1%'}}>
+            <p className="font-20px d-block text-center heading-font" style={{marginTop: '2%', marginBottom: '2%'}}>
             ICO seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver.
             </p>
 
             <div className="roadmap-img"></div>
             
-            <h6 className="font-36px mb-2 mt-5 pt-3 paragraph-font" id="team-section" style={{fontWeight: 'bold'}}>Our Awesome Team</h6>
-            <p className="font-20px d-block text-center heading-font" style={{marginTop: '1%'}}>
-                ICO seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver.
-            </p>
+            <h6 className="font-36px mb-2 mt-5 pt-3 paragraph-font" id="team-section" style={{fontWeight: 'bold', paddingTop: '100px'}}>Our Awesome Team</h6>
+            
 
             <img alt="" width="244px" height="244px" src={Images.shajuanda} className="mt-5 mb-3" />
             <h6 className="font-28px mb-2 heading-font">Shajuanda</h6>
@@ -33,7 +31,7 @@ const RoadMapSection = (props) => {
             <span className="font-20px mb-3 d-block text-center heading-font">
                 White-Founder-IT Consulting Expert-Entrepreneur Grambling State University
             </span>
-            <span className="font-16px text-center d-block heading-font" style={{marginLeft: '10%', marginRight: '10%', marginBottom: '100px'}}>
+            <span className="font-16px text-center d-block heading-font" style={{marginLeft: '10%', marginRight: '10%'}}>
                 Over 17 years of leadership and administrative experience in the IT industry.Managed large portfolio/programs/projects including testing (QA) and development and High Enterprise applications.Over nine years of implementing best practices and gathering requirements for Quality Assurance methodology for various software development projects, services, and products.Managed projects, teams, applications with multi-million-dollar budgets, P&L, SOW, RFP ($7-20 million).
             </span>
 

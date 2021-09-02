@@ -8,9 +8,9 @@ const AboutSection = (props) => {
 
     return(
 
-        <div className="w-100 app-flex-column pb-4" style={{marginTop: '100px'}}>
+        <div className="w-100 app-flex-column pb-4 mt-5">
 
-            <Row className="mx-0 mt-5 p-0">
+            <Row className="mx-0 p-0">
 
                 <Col xs={12} sm={12} md={6} lg={6} xl={6} className="m-0 p-0">
                     <img alt="" src={Images.aboutImage} className="about-image" />

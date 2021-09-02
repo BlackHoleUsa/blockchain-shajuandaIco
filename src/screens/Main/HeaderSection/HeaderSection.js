@@ -63,7 +63,7 @@ const HeaderSection = (props) => {
 
     return(
 
-        <Row className="m-0 p-0">
+        <Row className="m-0 p-0 mb-5">
 
             <Col xs={12} sm={12} md={6} lg={6} xl={6} className="m-0 p-0">
 

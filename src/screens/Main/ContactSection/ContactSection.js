@@ -34,7 +34,7 @@ const ContactSection = (props) => {
         <div className="app-flex-column w-100 py-5 text-white text-center justify-content-center align-items-center contact-section" style={{marginTop: '100px'}} 
         id="faq-section">
             
-            <h6 className="font-36px mb-2 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>Frequently Asked Question</h6>
+            <h6 className="font-36px mt-5 mb-2 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>Frequently Asked Question</h6>
             <p className="font-20px heading-font" style={{marginTop: '1%'}}>
                 Most asking questions from User Side are answered by our Team
             </p>
