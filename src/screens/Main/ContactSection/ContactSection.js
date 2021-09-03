@@ -40,7 +40,6 @@ const ContactSection = (props) => {
             setName('');
             setMsg('');
           })
-          // Handle errors here however you like, or use a React error boundary
           .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
       }
     return (
