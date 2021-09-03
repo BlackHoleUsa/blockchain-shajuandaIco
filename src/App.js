@@ -1,6 +1,5 @@
 import React from "react";
 import './App.css';
-import * as emailjs from "emailjs-com";
 import { Switch, withRouter, Redirect } from 'react-router-dom';
 import { Routes } from './Routes/Routes';
 import PublicRoute from './Routes/public.routes';

@@ -25,9 +25,24 @@ const ContactSection = (props) => {
             alert('Message should be greater than 15 characters.');
         }
         else {
+            const templateId = 'template_265z626';
 
+            sendFeedback(templateId, { message_html: msg, from_name: name, reply_to: email })
         }
     }
+    const sendFeedback = (templateId, variables) => {
+        window.emailjs.send(
+          'service_b3eu7hh', templateId,
+          variables
+          ).then(res => {
+            alert('Email successfully sent!')
+            setEmail('');
+            setName('');
+            setMsg('');
+          })
+          // Handle errors here however you like, or use a React error boundary
+          .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
+      }
     return (
 
         <div className="app-flex-column w-100 py-5 text-white text-center justify-content-center align-items-center contact-section" style={{ marginTop: '100px' }}
