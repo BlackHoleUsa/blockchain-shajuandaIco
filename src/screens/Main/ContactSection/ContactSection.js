@@ -78,8 +78,8 @@ const ContactSection = (props) => {
                     Simply fill up the Foam below we will Contact you.
                 </p>
 
-                <input placeholder="Name" name="name" value={name} className="info-field mt-4 heading-font" onChange={(e) => setName(e.target.value)} style={{ height: '70px', border: 'solid 5px rgb(20, 20, 20)', fontSize: '23px' }} />
-                <input placeholder="Email" email="email" value={email} className="info-field heading-font" onChange={(e) => setEmail(e.target.value)} style={{ height: '70px', border: 'solid 5px rgb(20, 20, 20)', fontSize: '23px' }} />
+                <input placeholder="Name" name="name" autoComplete="off" value={name} className="info-field mt-4 heading-font" onChange={(e) => setName(e.target.value)} style={{ height: '70px', border: 'solid 5px rgb(20, 20, 20)', fontSize: '23px' }} />
+                <input placeholder="Email" email="email" autoComplete="off" value={email} className="info-field heading-font" onChange={(e) => setEmail(e.target.value)} style={{ height: '70px', border: 'solid 5px rgb(20, 20, 20)', fontSize: '23px' }} />
                 <textarea
                     placeholder="Message" message="message" value={msg} className="info-field heading-font" onChange={(e) => setMsg(e.target.value)} style={{ border: 'solid 5px rgb(20, 20, 20)', fontSize: '23px' }}>
                 </textarea>
