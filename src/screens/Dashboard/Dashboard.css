@@ -39,13 +39,62 @@
     display: none;
 }
 
+.withdraw-container{
+    margin-left: auto;
+}
+
+.withdraw-container .withdraw-input{
+    width: 245px;
+    border: none !important;
+    outline: none !important;
+    padding: 10px 12px;
+    background-color: var(--secondary);
+    border-radius: 6px;
+    color: var(--white);
+}
+
+.withdraw-container .withdraw-input::placeholder{
+    color: var(--roadMap);
+    font-weight: 500;
+}
+
+.withdraw-container .withdraw-button{
+    padding: 10px 22px;
+    background-color: var(--white);
+    border-radius: 6px;
+    color: var(--black);
+    font-size: 15px;
+    border: none !important;
+    outline: none !important;
+    text-transform: capitalize;
+    margin-left: 6px;
+    font-weight: 500;
+}
+
 @media screen and (min-width: 992px) and (max-width: 1199px) {
     .dashboard-conis {
         width: 49%;
     }
+    .withdraw-container .withdraw-input{ width: 100%; }
+    .withdraw-container .withdraw-button{
+        width: 100%;
+        margin-top: 7px;
+        margin-left: 0px;
+    }
 }
 
 @media screen and (max-width: 991px) {
+
+    .heading-wrapper{
+        display: flex;
+        flex-direction: column !important;
+    }
+
+    .withdraw-container{
+        margin-left: 0;
+        padding-bottom: 10px;
+    }
+
     .dashboard-conis {
         width: 49%;
         height:80px;
@@ -87,6 +136,14 @@
     }
 }
 @media screen and (max-width: 575px) {
+
+    .withdraw-container .withdraw-input{ width: 100%; }
+    .withdraw-container .withdraw-button{
+        width: 100%;
+        margin-top: 7px;
+        margin-left: 0px;
+    }
+
     .dashboard-conis {
         width: 100%;
         text-align: center;

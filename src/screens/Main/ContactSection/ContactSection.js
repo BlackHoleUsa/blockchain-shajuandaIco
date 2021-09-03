@@ -40,7 +40,10 @@ const ContactSection = (props) => {
             setName('');
             setMsg('');
           })
-          .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
+          .catch(err => {
+            console.error('Oh well, you failed. Here some thoughts on the error that occured:', err);
+            alert('Something went wrong.');
+          });
       }
     return (
 
