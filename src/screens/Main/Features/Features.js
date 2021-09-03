@@ -99,7 +99,7 @@ const FeatureSection = (props) => {
 
                 </div>
 
-                <div className="w-100 app-flex-column align-items-center justify-content-center feature-section text-white" style={{marginTop: '100px'}}>
+                <div className="w-100 app-flex-column align-items-center justify-content-center feature-section text-white" style={{marginTop: '50px'}}>
 
                     <h6 className="font-36px mb-1 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>Features</h6>
                     <p className="font-20px d-block text-center features-p">Features of SA RA Token which makes it better than others.</p>

@@ -9,7 +9,7 @@ const TokenSaleSection = (props) => {
 
     return(
 
-        <div className="app-flex-column w-100 py-5 text-white justify-content-center align-items-center token-section" style={{marginTop: '100px'}}>
+        <div className="app-flex-column w-100 pb-5 text-white justify-content-center align-items-center token-section" style={{marginTop: '100px'}}>
             
             <h6 className="font-36px mb-1 paragraph-font" style={{fontWeight: 'bold'}}>Token Sale</h6>
             <p className="font-20px d-block text-center heading-font" style={{marginTop: '1%'}}>Token distribution accounts for every ‘in and out’ flow of tokens in the system.</p>

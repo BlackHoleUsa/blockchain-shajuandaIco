@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Dashboard.css';
 
 import Sidebar from '../../components/Sidebar/Sidebar';
@@ -7,15 +7,18 @@ import { Images } from '../../Assets/Images';
 
 const Dashboard = () => {
 
-    const data = [
-        { heading: 'ICO Start Date', date: 'Jun 2, 2021' },
-        { heading: 'ICO End Date', date: 'Oct 4, 2021' },
-        { heading: 'Total Tokens ETH', date: '3.0611162 DASH' },
-        { heading: 'Token Holdings', date: '0xB3775fB83F7D1' },
-        { heading: 'Convert Price', date: '$800.056' },
-        { heading: 'Market Value', date: '$780.00' },
-        { heading: 'Remaining Token', date: '25 ETH' }
-    ];
+    // usman change and reset state according to blockchain response
+    const [data, setData] = useState(
+        [
+            { heading: 'ICO Start Date', date: 'Jun 2, 2021' },
+            { heading: 'ICO End Date', date: 'Oct 4, 2021' },
+            { heading: 'Total Tokens ETH', date: '3.0611162 DASH' },
+            { heading: 'Token Holdings', date: '0xB3775fB83F7D1' },
+            { heading: 'Convert Price', date: '$800.056' },
+            { heading: 'Market Value', date: '$780.00' },
+            { heading: 'Remaining Token', date: '25 ETH' }
+        ]
+    );
 
     return (
 

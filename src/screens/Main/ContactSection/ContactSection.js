@@ -45,7 +45,7 @@ const ContactSection = (props) => {
       }
     return (
 
-        <div className="app-flex-column w-100 py-5 text-white text-center justify-content-center align-items-center contact-section" style={{ marginTop: '100px' }}
+        <div className="app-flex-column w-100 py-5 text-white text-center justify-content-center align-items-center contact-section" 
             id="faq-section">
 
             <h6 className="font-36px mt-5 mb-2 paragraph-font" style={{ fontWeight: 'bold', letterSpacing: '1px' }}>Frequently Asked Question</h6>
@@ -71,7 +71,7 @@ const ContactSection = (props) => {
             </Row>
 
             <div className="info" id="contact-section" style={{ marginTop: '100px' }}>
-                <h6 className="font-28px mb-2 mt-5 pt-5 paragraph-font" style={{ fontWeight: 'bold', letterSpacing: '2px', lineHeight: '30px' }}>We Are Happy To Answer Any Question You Have For Us</h6>
+                <h6 className="font-28px mb-2 pt-5 paragraph-font" style={{ fontWeight: 'bold', letterSpacing: '2px', lineHeight: '30px' }}>We Are Happy To Answer Any Question You Have For Us</h6>
                 <p className="font-20px mb-4 heading-font" style={{ marginTop: '1%' }}>
                     Simply fill up the Foam below we will Contact you.
                 </p>
