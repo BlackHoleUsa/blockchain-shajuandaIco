@@ -24,10 +24,20 @@ const Footer = (props) => {
             alert('Please enter your valid email.');
         } 
         else{
-
+            const templateId = 'template_9j8udvl';
+        sendFeedback(templateId, { message_html: email, reply_to: email})
         }
     }
-
+    const sendFeedback = (templateId, variables) => {
+        window.emailjs.send(
+          'service_b3eu7hh', templateId,
+          variables
+          ).then(res => {
+            alert('Thanks for subscribing!');
+            setEmail('');
+          })
+          .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
+      }
     return(
 
         <div className="footer-container position-relative">
