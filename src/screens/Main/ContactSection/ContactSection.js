@@ -35,7 +35,7 @@ const ContactSection = (props) => {
           'service_b3eu7hh', templateId,
           variables
           ).then(res => {
-            alert('Email successfully sent!')
+            alert('Your message is recieved by our Team!')
             setEmail('');
             setName('');
             setMsg('');
