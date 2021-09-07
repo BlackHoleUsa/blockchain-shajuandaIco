@@ -33,7 +33,7 @@ const Footer = (props) => {
           'service_b3eu7hh', templateId,
           variables
           ).then(res => {
-            alert('Thanks for subscribing!');
+            alert('Thanks for subscribing');
             setEmail('');
           })
           .catch(err => {
