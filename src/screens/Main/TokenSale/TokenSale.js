@@ -21,7 +21,7 @@ const TokenSaleSection = (props) => {
                             { i === 0 ? 'token' : 'funds' } ALLOCATION
                         </h6>
                         <spam className="left-sec">
-                           <h3>35% Sa Ra</h3>
+                           <h3>40% Sa Ra</h3>
                            <h3>5% Investors</h3>
                            <h3>5% Developers</h3>
                         </spam>

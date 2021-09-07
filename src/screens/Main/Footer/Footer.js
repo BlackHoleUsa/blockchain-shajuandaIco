@@ -90,7 +90,7 @@ const Footer = (props) => {
                     <div className="w-100 app-flex-column mt-2">
                         <h6 className="font-20px mb-3 paragraph-font" style={{fontWeight: 'bold', letterSpacing: '1px'}}>SUBSCRIBE WITH US</h6>
                         <span className="font-18px mb-2 heading-font" style={{marginRight: '10%'}}>
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
+                        You are invited to subscribe for the updates from our Team.
                         </span>
                         
                         <div className="footer-subscribe">
