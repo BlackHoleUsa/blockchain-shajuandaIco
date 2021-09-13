@@ -25,14 +25,14 @@ const ContactSection = (props) => {
             alert('Message should be greater than 15 characters.');
         }
         else {
-            const templateId = 'template_265z626';
+            const templateId = 'template_1d7x1jn';
 
             sendFeedback(templateId, { message_html: msg, from_name: name, reply_to: email })
         }
     }
     const sendFeedback = (templateId, variables) => {
         window.emailjs.send(
-          'service_b3eu7hh', templateId,
+          'service_o0cz1gk', templateId,
           variables
           ).then(res => {
             alert('Your message is recieved by our Team!')
