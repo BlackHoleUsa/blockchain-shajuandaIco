@@ -36,7 +36,6 @@
     width: 100%;
     margin: 0;
   }
-  
   .app-flex-column {
     display: flex;
     flex-direction: column;
@@ -47,7 +46,9 @@
   .cursor-pointer-sort {
     cursor: pointer;
   }
-
+  .paragraph-font{
+    font-family: 'oswald';
+  }
   .gradient-apply{
     background: transparent linear-gradient(269deg, #F98A07 0%, #F98A07 14%, #F3B72C 100%) 0% 0% no-repeat padding-box;
     opacity: 1;

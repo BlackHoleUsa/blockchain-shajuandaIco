@@ -17,7 +17,7 @@ const CustomAccordian = (props) => {
                 
                 <Card.Header className="p-0 m-0 border-0 shadow-none">
                 
-                    <Accordion.Toggle as={Button} variant="link" eventKey="0" className="p-0 m-0 w-100">
+                    <Accordion.Toggle as={Button} variant="link" eventKey="0" className="p-0 m-0 w-100" style={{textDecoration: 'none'}}>
                         
                         <div className="w-100 app-flex-row align-items-center justify-content-between font-20px text-white heading-font"
                         onClick={() => setClick(!click)}>

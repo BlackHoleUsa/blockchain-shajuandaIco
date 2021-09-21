@@ -1,7 +1,11 @@
 .modal-content{
     border: 2px solid black;
 }
-
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .buy-coin-btn{
     width: 143px;
     height: 51px;

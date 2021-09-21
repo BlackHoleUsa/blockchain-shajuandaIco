@@ -66,7 +66,7 @@ const Topbar = (props) => {
     return (
 
         <Navbar collapseOnSelect expand="lg" className={`
-            navbar navbar-expand-lg navbar-light fixed-top padding-topbar
+            navbar navbar-expand-lg navbar-light fixed-top paragraph-font padding-topbar
             ${(scroll || showMenu) ? 'bg-white' : ''}
         `}>
 
@@ -84,7 +84,7 @@ const Topbar = (props) => {
                         data.map((link, i) => (
                             <Nav.Item
                                 onClick={() => clickLink({ value: link.value.toLowerCase(), sectionId: link.sectionId })}
-                                className={` nav-item p-0 nav-links heading-font
+                                className={` nav-item p-0 nav-links paragraph-font
                                     ${(currentState.toLowerCase() === link.value.toLowerCase()) ? 'gradient-apply' : 'inactive-link'} `}
                                 key={i}
                             >
