@@ -60,7 +60,7 @@ const Dashboard = () => {
                             </div>
                             <div className="withdraw-container">
                                 <input type="number" 
-                                    value={numberField} autoComplete="off" className="withdraw-input"
+                                    value={numberField} autoComplete="off" min="0" className="withdraw-input"
                                     onChange={(e) => setNumberField(e.target.value)} placeholder="Amount" 
                                     onKeyDown={(e) => getRegExp.includes(e.key) && e.preventDefault()}
                                 />   
@@ -70,7 +70,7 @@ const Dashboard = () => {
                             </div>
                         </div>
 
-                        <div className="w-75 bg-line" style={{ height: '1px', background: 'whitesmoke' }}>
+                        <div className="bg-line" style={{ height: '1px', background: 'whitesmoke' }}>
                         </div>
 
                         <div className="mx-0 mt-5 w-100 p-0 text-white" style={{ height: '80%', overflowY: 'auto' }}>

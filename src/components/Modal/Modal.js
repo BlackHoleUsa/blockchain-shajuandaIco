@@ -76,7 +76,9 @@ const CustomModal = (props) => {
 
         <Modal show={show} onHide={handleClose} centered 
         backdrop="static" autoFocus={false}>
-            
+            <div className="app-flex-column justify-content-center align-items-center w-100 h-50">
+                <div className="text-white font-30px" style={{marginTop: '-60px'}}>Holdings</div>
+            </div>
             <div className="px-0 py-4 bg-secondary rounded position-relative w-100"
             style={{ margin: '0px', border: '3px solid var(--primary)', outline: 'none' }}>
     
@@ -93,7 +95,7 @@ const CustomModal = (props) => {
                                 <tr>
                                     <td><h4 className="text-center text-white mr-3 heading-font">Buy</h4></td>
                                     <td>
-                                    <input className="buy-coin-filed heading-font" type="number" placeholder="Enter Value" value={value} onChange={(e) => {
+                                    <input className="buy-coin-filed heading-font" type="number" placeholder="Enter Value" min="0" value={value} onChange={(e) => {
                                                 setValue(e.target.value); 
                                                 setConvertedValue(e.target.value/1000);
                                             }} onKeyDown={(e) => getRegExp.includes(e.key) && e.preventDefault()}/>

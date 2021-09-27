@@ -10,7 +10,9 @@
     font-size: 18px;
     
 }
-
+.bg-line{
+    width:40%;
+}
 .dashboard-conis{
     width: 32%;
     height: 100px;
@@ -110,6 +112,7 @@
     }
     .bg-line{
         margin:0px auto;
+        width: 75%;
     }
     .small-screen-logo{
         display: initial;

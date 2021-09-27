@@ -35,9 +35,7 @@ const Connect = (props) => {
                 }} 
             />
 
-            <div className="app-flex-column justify-content-center align-items-center w-100 h-50">
-                <div className="text-white font-30px">Holdings</div>
-            </div>
+            
 
             <CustomModal show={showModal} handleClose={() => {
                 setShowModal(false);
