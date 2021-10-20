@@ -5,7 +5,7 @@ import './global.css';
 import Shajuanda from './App';
 import reportWebVitals from './reportWebVitals';
 
-import { HashRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './custom.scss';

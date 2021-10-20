@@ -1,8 +1,7 @@
 {
-  "name": "shajuanda",
+  "name": "sara",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://blackhole@sardartufani.com/projects/shajuanda",
   "dependencies": {
     "@fontsource/oswald": "^4.5.0",
     "@testing-library/jest-dom": "^5.11.9",
