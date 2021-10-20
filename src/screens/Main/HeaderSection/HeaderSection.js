@@ -17,7 +17,7 @@ const HeaderSection = (props) => {
         let days, minutes, seconds;
 
         // Get today's date and time
-        const countDownDate = new Date("Aug 6, 2022 23:59:59").getTime();
+        const countDownDate = new Date("Oct 20, 2022 23:59:59").getTime();
         const timer = setInterval(() => {
 
             const now = new Date().getTime();
@@ -66,7 +66,9 @@ const HeaderSection = (props) => {
     const started = () => {
         goToSection('about-section', false);
     }
-
+    const showTutorial = () => {
+        window.open('https://gateway.pinata.cloud/ipfs/QmPCxTLUGcDWYZyrn4ejSoZdeL9VjfQiDv8spf3TZAUZpw', '_blank');
+      }
     return(
 
         <Row className="m-0 p-0 mb-5">
@@ -80,11 +82,11 @@ const HeaderSection = (props) => {
                     <br />
                     
                     <button className="gradient-apply border-0 paragraph-font cursor-pointer-sort" 
-                        onClick={started}
-                        style={{ width: '120px', height: '50px', fontSize: '20px', 
+                        onClick={showTutorial}
+                        style={{ width: '130px', height: '50px', fontSize: '20px', 
                         fontWeight: 'bold', letterSpacing: '1px', zIndex: 12 }}
                     >
-                        Get Started
+                        How to Invest
                     </button>
                     
                     <br />

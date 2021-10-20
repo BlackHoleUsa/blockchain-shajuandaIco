@@ -19,6 +19,9 @@ export const Images = {
     mind: require('./images/yellow-mind.png').default,
     profit: require('./images/yellow-profits.png').default,
 
+    //video
+    aboutVideo: require('./video/saraVideo.mp4').default,
+
     ctn: require('./images/ctn.png').default,
     circleSide: require('./images/circle-side.png').default,
     circleSideHalf: require('./images/circle-side-half.png').default,

@@ -3,7 +3,7 @@ import './AboutSection.css';
 import { Row, Col } from 'react-bootstrap'; 
 import BorderBox from '../../../components/BorderBox/BorderBox';
 import { Images } from '../../../Assets/Images';
-
+import saraVideo from '../../../Assets/video/saraVideo.mp4';
 const AboutSection = (props) => {
 
     return(
@@ -13,11 +13,14 @@ const AboutSection = (props) => {
             <Row className="mx-0 p-0">
 
                 <Col xs={12} sm={12} md={6} lg={6} xl={6} className="m-0 p-0">
-                    <img alt="" src={Images.aboutImage} className="about-image" />
+                <video controls className="about-image">
+                    <source src={saraVideo} type="video/mp4" />
+                </video>
+                    {/*<img alt="" src={Images.aboutImage} className="about-image" />*/}
                 </Col>
 
                 <Col xs={12} sm={12} md={6} lg={6} xl={6} className="p-0 m-0">
-                    <div className="h-100 w-100 app-flex-column justify-content-center align-items-center 
+                    <div className="about-text h-100 w-100 app-flex-column justify-content-center align-items-center 
                         text-left about-right-section">
                         <BorderBox className="border-box-about" adjust={true}>
                             <h6 className="pl-3 pb-3 pt-3 font-36px paragraph-font">About Block Chain Expert Solution</h6>
