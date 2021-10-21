@@ -67,7 +67,7 @@ const HeaderSection = (props) => {
         goToSection('about-section', false);
     }
     const showTutorial = () => {
-        window.open('https://gateway.pinata.cloud/ipfs/QmPCxTLUGcDWYZyrn4ejSoZdeL9VjfQiDv8spf3TZAUZpw', '_blank');
+        window.open('https://gateway.pinata.cloud/ipfs/QmXDL5UYjE1RzQfobC5YhpwCfaoZa625dmZhQoxGxgRpKR', '_blank');
       }
     return(
 

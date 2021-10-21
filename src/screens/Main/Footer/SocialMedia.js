@@ -18,14 +18,11 @@ const SocialMedia = () => {
 
                 <div className="app-flex-row align-items-center justify-content-center w-50 text-center">
 
-                    <GrFacebookOption className={`${iconClass} mr-4`} 
-                     onClick={() => goToLink('https://facebook.com')} />
-
                     <GrTwitter className={`${iconClass} mr-4`} 
                      onClick={() => goToLink('https://twitter.com/Sa_Ra_Token')} />
 
                     <AiOutlineInstagram className={iconClass} 
-                    onClick={() => goToLink('https://www.instagram.com/sa_ratoken/')} />
+                    onClick={() => goToLink('https://www.instagram.com/sa_ra_token/')} />
 
                 </div>
             </div>
