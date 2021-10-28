@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Topbar.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { Images } from '../../Assets/Images';
 import { Routes } from '../../Routes/Routes';
 import { Avatar } from '../Avatar/Avatar';
@@ -22,7 +22,7 @@ const Topbar = (props) => {
     const [scroll, setScroll] = useState(false);
 
     const [showMenu, setShowMenu] = useState(false);
-
+    const clientAddress = '0x6583aADad3A8B3F3D489A2aBB80924023CB1FF8';
     const { currentState, clickLink } = props;
 
     const connectToMetaMask = () => {
@@ -36,7 +36,8 @@ const Topbar = (props) => {
         { id: 4, value: 'Token', sectionId: 'token-section' },
         { id: 5, value: 'Roadmap', sectionId: 'roadmap-section' },
         { id: 6, value: "FAQ's", sectionId: 'faq-section' },
-        { id: 7, value: 'Contact', sectionId: 'contact-section' }
+        { id: 7, value: 'Contact', sectionId: 'contact-section' },
+        {id: 8, value: '', sectionId: 'dashboard-section'}
     ];
 
     useEffect(() => {
@@ -83,14 +84,14 @@ const Topbar = (props) => {
                     {
                         data.map((link, i) => (
                             <Nav.Item
-                                onClick={() => clickLink({ value: link.value.toLowerCase(), sectionId: link.sectionId })}
+                                onClick={() => link.id === 8 ? '' : clickLink({ value: link.value.toLowerCase(), sectionId: link.sectionId })}
                                 className={` nav-item p-0 nav-links paragraph-font
                                     ${(currentState.toLowerCase() === link.value.toLowerCase()) ? 'gradient-apply' : 'inactive-link'} `}
                                 key={i}
                             >
 
                                 <span className={(scroll || showMenu) ? 'text-black font-weight-bold' : 'text-white'}>
-                                    {link.value}
+                                    {link.sectionId === 'dashboard-section' && clientAddress !== state?.address[0] ? <Link to={`/${Routes.dashboard}`}><span style={{color: '#F98A07', fontWeight: 'bold', marginRight: '20px'}}>Dashboard</span></Link> : link.value}
                                 </span>
 
                             </Nav.Item>

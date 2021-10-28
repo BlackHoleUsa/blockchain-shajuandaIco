@@ -1,14 +1,14 @@
 .padding-topbar{
-    padding: 15px 120px 10px 120px !important;
+    padding: 15px 80px 10px 80px !important;
     transition: all .4s ease-in-out;
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
     .padding-topbar{
-        padding: 20px 15px 10px 30px !important;
+        padding: 20px 30px 10px 30px !important;
     }
     .nav-links{
-        width: 82px !important;
+        width: 72px !important;
     }
 }
 
