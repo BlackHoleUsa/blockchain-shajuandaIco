@@ -100,7 +100,7 @@ const Topbar = (props) => {
 
                     <button className="connect-wallet pb-0 gradient-apply border-0 connect-meta-mask paragraph-font"
                         onClick={connectToMetaMask}
-                        disabled={state?.connection}
+                        disabled={true}
                         style={{color: 'white', fontWeight: 'bold', letterSpacing: '1px'}}
                     >
                         {
