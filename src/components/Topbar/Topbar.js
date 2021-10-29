@@ -121,7 +121,7 @@ const Topbar = (props) => {
 
                     {
                         state?.connection &&
-                        <NavLink exact to={`/${Routes.connect}`} className={`connect-wallet gradient-apply pb-0 w-auto pl-4 pr-3 margin-buy-btn paragraph-font
+                        <NavLink exact to={`/${Routes.connect}` } className={`connect-wallet gradient-apply pb-0 w-auto pl-4 pr-3 margin-buy-btn paragraph-font
                           ${(scroll || showMenu) ? 'inactive-link-dark' : 'inactive-link'} `}>
 
                             BUY <BiChevronDown className="ml-1 font-18px" />
