@@ -22,7 +22,7 @@ const Topbar = (props) => {
     const [scroll, setScroll] = useState(false);
 
     const [showMenu, setShowMenu] = useState(false);
-    const clientAddress = '0x6583aADad3A8B3F3D489A2aBB80924023CB1FF8';
+    const clientAddress = '0x6583aADad3A8B3F3D489A2aBB80924023CB1FF8c';
     const { currentState, clickLink } = props;
 
     const connectToMetaMask = () => {
@@ -91,7 +91,7 @@ const Topbar = (props) => {
                             >
 
                                 <span className={(scroll || showMenu) ? 'text-black font-weight-bold' : 'text-white'}>
-                                    {link.sectionId === 'dashboard-section' && clientAddress !== state?.address[0] ? <Link to={`/${Routes.dashboard}`}><span style={{color: '#F98A07', fontWeight: 'bold', marginRight: '20px'}}>Dashboard</span></Link> : link.value}
+                                    {link.sectionId === 'dashboard-section' && clientAddress === state?.address[0] ? <Link to={`/${Routes.dashboard}`}><span style={{color: '#F98A07', fontWeight: 'bold', marginRight: '20px'}}>Dashboard</span></Link> : link.value}
                                 </span>
 
                             </Nav.Item>
