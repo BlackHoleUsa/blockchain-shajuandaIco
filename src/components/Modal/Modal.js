@@ -111,7 +111,7 @@ const CustomModal = (props) => {
                         </table>
                     </div>
 
-                    <button className="buy-coin-btn paragraph-font" disabled={true}>
+                    <button className="buy-coin-btn paragraph-font" onClick={clickBuyCoin}>
                         { loading ? <Spinner animation="border" size="sm" /> : 'buy now' }
                     </button>
                 </div>

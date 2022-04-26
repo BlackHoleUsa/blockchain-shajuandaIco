@@ -14,7 +14,7 @@
     width:40%;
 }
 .dashboard-conis{
-    width: 32%;
+    width: 45%;
     height: 100px;
     background: transparent linear-gradient(269deg, #F98A07 0%, #F98A07 14%, #F3B72C 100%) 0% 0% no-repeat padding-box;
     border-radius: 6px;
@@ -72,10 +72,12 @@
     margin-left: 6px;
     font-weight: 500;
 }
-
+.dashboard-parent{
+    margin-left: 35%;
+}
 @media screen and (min-width: 992px) and (max-width: 1199px) {
     .dashboard-conis {
-        width: 49%;
+        width: 59%;
     }
     .withdraw-container .withdraw-input{ width: 100%; }
     .withdraw-container .withdraw-button{
@@ -98,7 +100,7 @@
     }
 
     .dashboard-conis {
-        width: 49%;
+        width: 100%;
         height:80px;
     }
     .dashboard-sidebar{
@@ -137,6 +139,10 @@
     .dashboard-heading-large{
         font-size: 25px;
     }
+    .dashboard-parent{
+        margin-left: 0%;
+    }
+    
 }
 @media screen and (max-width: 575px) {
 
@@ -173,5 +179,8 @@
     }
     .dashboard-heading-small{
         font-size: 14px;
+    }
+    .dashboard-parent{
+        margin-left: 0%;
     }
 }
