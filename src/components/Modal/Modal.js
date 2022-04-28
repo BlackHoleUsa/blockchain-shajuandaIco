@@ -32,15 +32,16 @@ const CustomModal = (props) => {
             alert('Plz Write Amount.');
         } 
         else{
-            
-            if(state?.userBalance >= convertedValue){
-                setLoading(true);
-
-                const web3 = new Web3(Web3.givenProvider);
+            const web3 = new Web3(Web3.givenProvider);
                 const provider = new ethers.providers.Web3Provider(window.ethereum);
                 const signer = provider.getSigner();
-    
-                const contract = new ethers.Contract(
+                const id = await web3.eth.net.getId();
+                console.log(id);
+                if (id === 4 ) {
+                  if(state?.userBalance >= convertedValue){
+                  setLoading(true);
+
+                  const contract = new ethers.Contract(
                     SALE_CONTRACT_ADDRESS,
                     SALE_CONTRACT_ABI,
                     signer
@@ -67,7 +68,10 @@ const CustomModal = (props) => {
                 alert('Your balance is less.');
             }
             
-        }
+        }else{
+        alert('Please connect with proper network');
+    }
+}
     }
 
     const getRegExp = ['e', 'E', '+', '-', '.'];
