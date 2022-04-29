@@ -4,20 +4,48 @@ import './HeaderSection.css';
 import { Row, Col } from 'react-bootstrap'; 
 import BorderBox from '../../../components/BorderBox/BorderBox';
 import { goToSection } from '../../../utilities/CommonMethods';
-
+import Web3 from "web3";
+import {
+    SALE_CONTRACT_ABI,
+    SALE_CONTRACT_ADDRESS,
+  } from "../../../Contract/CrowdsaleContract";
 const HeaderSection = (props) => {
     
     const [day, setDay] = useState(0);
     const [hour, setHour] = useState(0);
     const [min, setMin] = useState(0);
     const [sec, setSec] = useState(0);
-
+    const getLaunchDate = async () => {
+        const contractABi=SALE_CONTRACT_ABI;
+        try{
+          const web3 = new Web3(new Web3.providers.HttpProvider("https://rinkeby-light.eth.linkpool.io/"));
+        const contractInstance = new web3.eth.Contract(contractABi,SALE_CONTRACT_ADDRESS);
+        const startTime = await contractInstance.methods.icoStartDate().call();
+        if(startTime){
+          //console.log('end date is ',startTime);
+        const fromFun='launchDate';
+        return startTime;
+        //  const actualTime = timeConverter(startTime, fromFun);
+        //  setLaunched(true);
+         
+        //  return actualTime;
+        //plz write your logic to show the launchDate
+        }
+        }catch(err){
+          if(err){
+          // console.log('in err of launch date')
+            getLaunchDate();
+          }
+        }
+        
+      
+      }
     useEffect(() => {
-
+        async function getCoundown(){
         let days, minutes, seconds;
-
+        const launchTime = await getLaunchDate();
         // Get today's date and time
-        const countDownDate = new Date("Oct 20, 2022 23:59:59").getTime();
+        const countDownDate =  launchTime * 1000 ;//new Date("Dec 05, 2022 23:59:59").getTime(); //launchTime *1000;
         const timer = setInterval(() => {
 
             const now = new Date().getTime();
@@ -36,10 +64,18 @@ const HeaderSection = (props) => {
             const totalDays        = Math.floor(totalHours/24);
 
             const hoursRem   = totalHours - ( totalDays * 24 );
-            setSec(seconds);
-            setMin(minutes);
-            setHour(hoursRem);
-            setDay(days);
+            if(distance > 0 ){
+                setSec(seconds);
+                setMin(minutes);
+                setHour(hoursRem);
+                setDay(days);
+            }else{
+                setSec(0);
+                setMin(0);
+                setHour(0);
+                setDay(0);
+            }
+            
 
             if (distance < 0) {
                 clearInterval(timer);
@@ -53,7 +89,8 @@ const HeaderSection = (props) => {
             setHour(days * 24);
             setDay(days);
         };
-
+    }
+    getCoundown();
     }, []);
 
     const data = [

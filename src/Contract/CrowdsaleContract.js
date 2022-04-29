@@ -1,4 +1,4 @@
-export const SALE_CONTRACT_ADDRESS = "0x09a6a624a6D1186C541A1557179910e13475c08c";
+export const SALE_CONTRACT_ADDRESS = "0x12dD9dDD19460cDE80aEb337D18f543B7E56A188";
 
 export const SALE_CONTRACT_ABI = [
 	{
@@ -62,6 +62,15 @@ export const SALE_CONTRACT_ABI = [
 	},
 	{
 		"constant": false,
+		"inputs": [],
+		"name": "adminWithdrawUsdt",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
 		"inputs": [
 			{
 				"internalType": "address",
@@ -77,8 +86,19 @@ export const SALE_CONTRACT_ABI = [
 	},
 	{
 		"constant": false,
-		"inputs": [],
-		"name": "finalizeCrowdsale",
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "beneficiary",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "usdtAmount_",
+				"type": "uint256"
+			}
+		],
+		"name": "buyTokensUSDT",
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
@@ -86,14 +106,17 @@ export const SALE_CONTRACT_ABI = [
 	},
 	{
 		"constant": false,
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_tokenAmount",
-				"type": "uint256"
-			}
-		],
-		"name": "getRefund",
+		"inputs": [],
+		"name": "ClaimTokens",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "finalizeCrowdsale",
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
@@ -122,15 +145,6 @@ export const SALE_CONTRACT_ABI = [
 	},
 	{
 		"constant": false,
-		"inputs": [],
-		"name": "StartRefund",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
 		"inputs": [
 			{
 				"internalType": "address",
@@ -145,6 +159,56 @@ export const SALE_CONTRACT_ABI = [
 		"type": "function"
 	},
 	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "startTime_",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "endTime_",
+				"type": "uint256"
+			}
+		],
+		"name": "updateIcoDates",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "rate_",
+				"type": "uint256"
+			}
+		],
+		"name": "updateRate",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "rate_",
+				"type": "uint256"
+			}
+		],
+		"name": "updateUsdtRate",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"payable": true,
 		"stateMutability": "payable",
 		"type": "fallback"
@@ -153,13 +217,33 @@ export const SALE_CONTRACT_ABI = [
 		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "rate",
+				"name": "weirate_",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "usdtRate_",
 				"type": "uint256"
 			},
 			{
 				"internalType": "contract ICOToken",
-				"name": "token",
+				"name": "token_",
 				"type": "address"
+			},
+			{
+				"internalType": "contract IERC20",
+				"name": "usdtAddress_",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "icoStartDate_",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "icoEndDate_",
+				"type": "uint256"
 			},
 			{
 				"internalType": "uint256",
@@ -180,6 +264,72 @@ export const SALE_CONTRACT_ABI = [
 				"internalType": "bool",
 				"name": "",
 				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "firstRelease",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "icoEndDate",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "icoStartDate",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "oneMonth",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
 			}
 		],
 		"payable": false,
@@ -218,8 +368,35 @@ export const SALE_CONTRACT_ABI = [
 	},
 	{
 		"constant": true,
-		"inputs": [],
-		"name": "saleRefund",
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "releasedFunds",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "secondRelease",
 		"outputs": [
 			{
 				"internalType": "bool",
@@ -255,6 +432,57 @@ export const SALE_CONTRACT_ABI = [
 				"internalType": "contract IERC20",
 				"name": "",
 				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "usdtRaised",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "usdtRate",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "UserFunds",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
 			}
 		],
 		"payable": false,

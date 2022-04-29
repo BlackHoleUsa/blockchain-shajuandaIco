@@ -1,4 +1,4 @@
-export const TOKEN_ADDRESS = "0x677bCa87A574e75665e8Ae4F492995687b9bcF32";
+export const TOKEN_ADDRESS = "0x42ae574751a8eda5bF8ac6e05c6bcac1eeC76084";
 
 export const TOKEN_ABI = [
 	{
@@ -22,6 +22,11 @@ export const TOKEN_ABI = [
 				"internalType": "uint256",
 				"name": "_cap",
 				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "admin",
+				"type": "address"
 			}
 		],
 		"payable": false,
@@ -189,11 +194,6 @@ export const TOKEN_ABI = [
 		"constant": false,
 		"inputs": [
 			{
-				"internalType": "address",
-				"name": "account",
-				"type": "address"
-			},
-			{
 				"internalType": "uint256",
 				"name": "amount",
 				"type": "uint256"
@@ -207,6 +207,30 @@ export const TOKEN_ABI = [
 				"type": "bool"
 			}
 		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "claimNumber",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "claimTokens",
+		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -322,6 +346,36 @@ export const TOKEN_ABI = [
 	{
 		"constant": true,
 		"inputs": [],
+		"name": "oneMonth",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "oneYear",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
 		"name": "owner",
 		"outputs": [
 			{
@@ -347,6 +401,21 @@ export const TOKEN_ABI = [
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "startDate",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{

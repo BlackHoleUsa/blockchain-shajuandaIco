@@ -12,6 +12,7 @@ import { initialState } from '../../redux/reducer/state';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { connectMetaMask, checkAlreadyConnectedMetaMask } from 'redux/thunk/thunk';
+import { Redirect } from 'react-router-dom';
 
 
 const Topbar = (props) => {
@@ -20,7 +21,8 @@ const Topbar = (props) => {
     const state = useSelector(state => state);
 
     const [scroll, setScroll] = useState(false);
-
+    const [launchTime, setLaunchTime] = useState(null);
+    const [endTime, setEndTime] = useState(null);
     const [showMenu, setShowMenu] = useState(false);
     const clientAddress = '0x6583aADad3A8B3F3D489A2aBB80924023CB1FF8c';
     const { currentState, clickLink } = props;
@@ -63,7 +65,23 @@ const Topbar = (props) => {
             setScroll(false);
         }
     }
-
+    const checkLaunching = () => {
+        const now = new Date().getTime();
+        const lTime = (1651216958*1000) - now;
+        const eTime = (1702252799*1000) - now;
+        setLaunchTime(lTime);
+        setEndTime(eTime);
+        console.log('In checking launching');
+        // if(lTime > 0){
+        //     alert('Please wait for launching date');
+        // }else if (eTime < 0){
+        //     alert('ICO ends, You cannot buy Tokens');
+        // }else{
+        //     <Redirect to={`/${Routes.connect}`} />
+        // }
+        
+      }
+      
     return (
 
         <Navbar collapseOnSelect expand="lg" className={`
@@ -121,7 +139,7 @@ const Topbar = (props) => {
 
                     {
                         state?.connection &&
-                        <NavLink exact to={`/${Routes.connect}` } className={`connect-wallet gradient-apply pb-0 w-auto pl-4 pr-3 margin-buy-btn paragraph-font
+                        <NavLink exact to={ `/${Routes.connect}` } className={`connect-wallet gradient-apply pb-0 w-auto pl-4 pr-3 margin-buy-btn paragraph-font
                           ${(scroll || showMenu) ? 'inactive-link-dark' : 'inactive-link'} `}>
 
                             BUY <BiChevronDown className="ml-1 font-18px" />

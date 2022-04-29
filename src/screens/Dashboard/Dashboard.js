@@ -5,6 +5,13 @@ import Sidebar from '../../components/Sidebar/Sidebar';
 import { Images } from '../../Assets/Images';
 import {checkAlreadyConnectedMetaMask} from '../../redux/thunk/thunk';
 import { useSelector, useDispatch } from 'react-redux';
+import Web3 from "web3";
+import { ethers } from "ethers";
+import Web3Utils from 'web3-utils';
+import {
+    SALE_CONTRACT_ABI,
+    SALE_CONTRACT_ADDRESS,
+  } from "../../Contract/CrowdsaleContract" ;
 
 const Dashboard = () => {
     const connection = useSelector(state => state.connection)
@@ -13,18 +20,51 @@ const Dashboard = () => {
     const adminAddress = "";
 
     const [ numberField, setNumberField ] = useState();
-
+    const [totalSoldSaRaTokens, setTotalSoldSaRaTokens] = useState('---');
+    const [totalCollectedEth, setTotalCollectedEth] = useState('---');
     //function for Total Sold Tokens
 
-    const totalSoldTokens=()=>{
-        //write your logic for total sold tokens
-    }
+    const totalSoldTokens = async () => {
+        const web3 = new Web3(Web3.givenProvider);
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner();
+        const contract = new ethers.Contract(
+            SALE_CONTRACT_ADDRESS,
+            SALE_CONTRACT_ABI,
+            signer
+        );
+       const id = await web3.eth.net.getId();
+         if (id === 4) {
+          
+           const soldTokens = await contract.soldTokens();
+           setTotalSoldSaRaTokens(parseInt((soldTokens)/1000000000000000000));
+         }
+     }
 
     //function for total collected tokens
 
-    const totalCollectedTokens=()=>{
-        //write your logic for total collected tokens
-    }
+    const collectedEth = async () => {
+        const web3 = new Web3(Web3.givenProvider);
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        // const id = await web3.eth.getChainId();
+        const id = await web3.eth.net.getId();
+          if (id === 4) {
+        const signer = provider.getSigner();
+        const contract = new ethers.Contract(
+          SALE_CONTRACT_ADDRESS,
+          SALE_CONTRACT_ABI,
+          signer
+      );
+      
+      
+        const tokensLeft = await contract.weiRaised();
+        const tokensInNumber = parseInt(tokensLeft);
+        const tokensInEth = parseFloat(Web3Utils.fromWei(`${tokensInNumber}`, 'ether')).toFixed(8);
+       
+        setTotalCollectedEth(tokensInEth);
+        
+          }
+      }
     
 
     // usman change and reset state according to blockchain response
@@ -49,6 +89,8 @@ const Dashboard = () => {
     const getRegExp = ['e', 'E', '+', '-', '.'];
     const dispatch = useDispatch();
   useEffect(() => {
+    totalSoldTokens();
+    collectedEth();
     const interval = setInterval(() => {
      
      // updateAddress(dispatch);
@@ -96,7 +138,7 @@ const Dashboard = () => {
                         <div className="bg-line" style={{ height: '1px', background: 'whitesmoke' }}>
                         </div>
 
-                        <div className="mx-0 mt-5 w-100 p-0 text-white" style={{ height: '80%', overflowY: 'auto' }}>
+                        <div className="mx-0 w-100 p-0 text-white" style={{ height: '80%', overflowY: 'auto', marginTop: '100px' }}>
 
                             {/* <div className="app-flex-row w-100 flex-wrap align-items-center justify-content-between">
                                 {
@@ -112,12 +154,12 @@ const Dashboard = () => {
                                  
                                     
                                         <div className="dashboard-conis mb-4">
-                                            <span className="paragraph-font">Total Sa Ra Tokens Sold</span>
-                                            <span className="paragraph-font">500</span>
+                                            <span className="paragraph-font">Total SaRa Tokens Sold</span>
+                                            <span className="paragraph-font">{totalSoldSaRaTokens}</span>
                                         </div>
                                         <div className="dashboard-conis mb-4">
                                             <span className="paragraph-font">Total Collected ETHs</span>
-                                            <span className="paragraph-font">5</span>
+                                            <span className="paragraph-font">{totalCollectedEth}</span>
                                         </div>
                                         <div className="dashboard-conis mb-4">
                                             <span className="paragraph-font">Rate of Token</span>

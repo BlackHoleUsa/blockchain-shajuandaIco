@@ -8,12 +8,12 @@ import { Routes } from '../../Routes/Routes';
 const Connect = (props) => {
     
     const [ showModal, setShowModal ] = useState(false);
-
+    
     const history = useHistory();
-
+    
     useEffect(() => {
-        setShowModal(true);        
         
+        setShowModal(true);        
         return () => {
             setShowModal(false);
         }
@@ -21,7 +21,7 @@ const Connect = (props) => {
     }, [])
 
     return(
-
+    
         <div className="app-flex-column w-100 h-100 bg-secondary position-relative">
             <img alt="" src={Images.bgHeader} className="position-absolute w-50 h-100"
             style={{ left: '-35%', top: '-20%' }} />
