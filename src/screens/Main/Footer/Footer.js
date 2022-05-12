@@ -57,7 +57,7 @@ const Footer = (props) => {
                         {/*<span className="font-18px my-3 heading-font" style={{marginRight: '10%'}}>
                             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium cia deserunt mollitia animi.
     </span>*/}
-                        <span className="font-18px mt-4 heading-font">&copy; 2021 sa-ra.digital ALL RIGHTS RESERVED.</span>
+                        <span className="font-18px mt-4 heading-font">&copy; 2022 sa-ra.digital ALL RIGHTS RESERVED.</span>
                     </div>
                 </Col>
 

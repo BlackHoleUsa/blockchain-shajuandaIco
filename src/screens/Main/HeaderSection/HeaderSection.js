@@ -136,7 +136,7 @@ const HeaderSection = (props) => {
                 <div className="h-100 w-100 app-flex-column justify-content-center align-items-center text-center header-right-section">
                     <BorderBox className="border-box h-auto">
                         <h6 className="pt-3 pb-2 paragraph-font" style={{fontWeight: 'bold', fontSize: '25px'}}>ICO Coin Start</h6>
-                        <span className="paragraph-font">Discount 70% From The Final Price</span>
+                        {/* <span className="paragraph-font">Discount 70% From The Final Price</span> */}
                         <div className="w-100 app-flex-row justify-content-between align-items-center px-4 flex-wrap" style={{ height: '190px' }}>
 
                             {
