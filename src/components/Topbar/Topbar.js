@@ -38,8 +38,8 @@ const Topbar = (props) => {
         { id: 4, value: 'Token', sectionId: 'token-section' },
         { id: 5, value: 'Roadmap', sectionId: 'roadmap-section' },
         { id: 6, value: "FAQ's", sectionId: 'faq-section' },
-        { id: 7, value: 'Contact', sectionId: 'contact-section' },
-        {id: 8, value: '', sectionId: 'dashboard-section'}
+        { id: 7, value: 'Contact', sectionId: 'contact-section' }
+        // {id: 8, value: '', sectionId: 'dashboard-section'}
     ];
 
     useEffect(() => {
@@ -109,7 +109,7 @@ const Topbar = (props) => {
                             >
 
                                 <span className={(scroll || showMenu) ? 'text-black font-weight-bold' : 'text-white'}>
-                                    {link.sectionId === 'dashboard-section' && clientAddress === state?.address[0] ? <Link to={`/${Routes.dashboard}`}><span style={{color: '#F98A07', fontWeight: 'bold', marginRight: '20px'}}>Dashboard</span></Link> : link.value}
+                                    {link.sectionId === 'dashboard-sections' && clientAddress === state?.address[0] ? <Link to={`/${Routes.dashboard}`}><span style={{color: '#F98A07', fontWeight: 'bold', marginRight: '20px'}}>Dashboard</span></Link> : link.value}
                                 </span>
 
                             </Nav.Item>

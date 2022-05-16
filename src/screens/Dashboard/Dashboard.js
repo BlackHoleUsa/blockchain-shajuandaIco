@@ -38,6 +38,8 @@ const Dashboard = () => {
           
            const soldTokens = await contract.soldTokens();
            setTotalSoldSaRaTokens(parseInt((soldTokens)/1000000000000000000));
+         }else{
+             alert('Please connect with proper network');
          }
      }
 
