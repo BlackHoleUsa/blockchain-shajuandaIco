@@ -34,7 +34,7 @@ const Dashboard = () => {
             signer
         );
        const id = await web3.eth.net.getId();
-         if (id === 4) {
+         if (id === 1) {
           
            const soldTokens = await contract.soldTokens();
            setTotalSoldSaRaTokens(parseInt((soldTokens)/1000000000000000000));
@@ -48,7 +48,7 @@ const Dashboard = () => {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         // const id = await web3.eth.getChainId();
         const id = await web3.eth.net.getId();
-          if (id === 4) {
+          if (id === 1) {
         const signer = provider.getSigner();
         const contract = new ethers.Contract(
           SALE_CONTRACT_ADDRESS,

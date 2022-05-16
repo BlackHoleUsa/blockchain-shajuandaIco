@@ -12,7 +12,6 @@ const Connect = (props) => {
     const history = useHistory();
     
     useEffect(() => {
-        
         setShowModal(true);        
         return () => {
             setShowModal(false);

@@ -29,7 +29,7 @@ const CustomModal = (props) => {
     const getLaunchDate = async () => {
         const contractABi=SALE_CONTRACT_ABI;
         try{
-          const web3 = new Web3(new Web3.providers.HttpProvider("https://rinkeby-light.eth.linkpool.io/"));
+          const web3 = new Web3(new Web3.providers.HttpProvider("https://main-light.eth.linkpool.io/"));
         const contractInstance = new web3.eth.Contract(contractABi,SALE_CONTRACT_ADDRESS);
         const startTime = await contractInstance.methods.icoStartDate().call();
         if(startTime){
@@ -52,7 +52,7 @@ const CustomModal = (props) => {
       const getIcoEndDate = async () => {
         const contractABi=SALE_CONTRACT_ABI;
         try{
-          const web3 = new Web3(new Web3.providers.HttpProvider("https://rinkeby-light.eth.linkpool.io/"));
+          const web3 = new Web3(new Web3.providers.HttpProvider("https://main-light.eth.linkpool.io/"));
         const contractInstance = new web3.eth.Contract(contractABi,SALE_CONTRACT_ADDRESS);
        
         const endTime = await contractInstance.methods.icoEndDate().call();
@@ -79,7 +79,7 @@ const CustomModal = (props) => {
         setLoading(true);
         const launchTime = await getLaunchDate();
         const endTime = await getIcoEndDate();
-        console.log('launching Date is ', launchTime, ' and ending Time is ', endTime);
+        //console.log('launching Date is ', launchTime, ' and ending Time is ', endTime);
         const now = new Date().getTime();
         const lTime = (launchTime*1000) - now;
         const eTime = (endTime*1000) - now;
@@ -107,7 +107,7 @@ const CustomModal = (props) => {
                 const signer = provider.getSigner();
                 const id = await web3.eth.net.getId();
                 console.log(id);
-                if (id === 4 ) {
+                if (id === 1 ) {
                   if(state?.userBalance >= convertedValue){
                   
 

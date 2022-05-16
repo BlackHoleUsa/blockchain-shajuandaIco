@@ -24,7 +24,7 @@ const Topbar = (props) => {
     const [launchTime, setLaunchTime] = useState(null);
     const [endTime, setEndTime] = useState(null);
     const [showMenu, setShowMenu] = useState(false);
-    const clientAddress = '0x6583aADad3A8B3F3D489A2aBB80924023CB1FF8c';
+    const clientAddress = '0x6583aADad3A8B';
     const { currentState, clickLink } = props;
 
     const connectToMetaMask = () => {

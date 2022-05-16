@@ -18,7 +18,7 @@ const HeaderSection = (props) => {
     const getLaunchDate = async () => {
         const contractABi=SALE_CONTRACT_ABI;
         try{
-          const web3 = new Web3(new Web3.providers.HttpProvider("https://rinkeby-light.eth.linkpool.io/"));
+          const web3 = new Web3(new Web3.providers.HttpProvider("https://main-light.eth.linkpool.io/"));
         const contractInstance = new web3.eth.Contract(contractABi,SALE_CONTRACT_ADDRESS);
         const startTime = await contractInstance.methods.icoStartDate().call();
         if(startTime){
